@@ -1,6 +1,7 @@
 MIT License
 
 Copyright (c) 2019 Paweł Romanowski
+
 Copyright (c) 2019 panr
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
