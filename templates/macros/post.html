@@ -4,7 +4,8 @@
             {{ page.summary | safe }}
         </div>
         <div>
-            <a class="read-more button" href="{{ page.permalink }}">Read more ↩</a>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="{{ page.permalink }}">Read more &#8617;&#xFE0E;</a>
         </div>
     {% else %}
         <div class="post-content">
