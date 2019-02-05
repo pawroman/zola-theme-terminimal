@@ -298,7 +298,7 @@ You can enable full unicode support in `config.toml`:
 # Use full Hack character set, not just a subset.
 # Switch this to true if you need full unicode support.
 # Defaults to false.
-use_full_hack_font = false
+use_full_hack_font = true
 ```
 
 Also see [Hack's docs](https://github.com/source-foundry/Hack/blob/master/docs/WEBFONT_USAGE.md).
