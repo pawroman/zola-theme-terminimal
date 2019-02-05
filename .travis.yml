@@ -1,7 +1,7 @@
 dist: xenial
 
 before_install:
-  - sudo snap install --edge --classic zola
+  - sudo snap install zola
 
 before_script:
   - zola build
