@@ -1,5 +1,5 @@
 name = "terminimal"
-description = "A minimal retro theme"
+description = "A simple, minimal retro theme"
 license = "MIT"
 homepage = "https://github.com/pawroman/zola-theme-terminimal/"
 min_version = "0.5.1"

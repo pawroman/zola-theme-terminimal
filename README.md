@@ -2,7 +2,7 @@
 
 ![No JavaScript](https://img.shields.io/badge/JavaScript-none-brightgreen.svg)
 
-![Screenshot](../blob/master/screenshot/screenshot.png?raw=true)
+![Screenshot](../master/screenshot/screenshot.png?raw=true)
 
 Fork (not a port) of "Terminal" Hugo theme
 by Radosław Kozieł (aka. panr):
@@ -328,8 +328,8 @@ Copyright © 2019 Paweł Romanowski (pawroman)
 Original theme: Copyright © 2019 Radosław Kozieł ([@panr](https://twitter.com/panr))
 
 The theme is released under the MIT License.
-Check the [license file](../blob/master/LICENSE.md)
+Check the [license file](../master/LICENSE.md)
 for more information.
 
 The license for Hack fonts used is included in
-[LICENSE-Hack.md](../blob/master/LICENSE-Hack.md).
+[LICENSE-Hack.md](../master/LICENSE-Hack.md).
