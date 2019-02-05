@@ -1,5 +1,7 @@
 dist: xenial
 
+language: generic
+
 before_install:
   - sudo snap install --edge zola
 
