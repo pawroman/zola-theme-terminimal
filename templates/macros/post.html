@@ -5,7 +5,10 @@
         </div>
         <div>
             <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
-            <a class="read-more button" href="{{ page.permalink }}">Read more &#8617;&#xFE0E;</a>
+            <a class="read-more button" href="{{ page.permalink }}">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
         </div>
     {% else %}
         <div class="post-content">

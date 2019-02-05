@@ -19,15 +19,15 @@ Many thanks for that outstanding original theme, Radek!
     - Content has been centered (instead of left-aligned).
     - The header stripes have been spaced out.
     - Tweaks to pagination, especially on mobile (small screens).
-    - The post title underline is now dashed instead of doubly-dotted.
-    - All links are underscored, as per
+    - The post title underline is dashed instead of doubly-dotted.
+    - All links are underlined, as per
       [Brutalist Web Design Guidelines](https://www.brutalist-web.design/).
     - Tweaks to header font sizes.
     - Minor footer tweaks.
 
 - Absolutely **no JavaScript**.
     - No JavaScript needed to pre-process anything.
-      Zola with it's Sass pre-processor is the only dependency.
+      Zola with its Sass pre-processor is the only dependency.
     - There's no menu trigger.
     - Things load crazy fast, as it's all static content.
     - Prism.js syntax highlighting is not supported (you can use
@@ -68,7 +68,7 @@ $ git clone https://github.com/pawroman/zola-theme-terminimal.git themes/termini
 Option B: also include it as a git submodule (it's better if you plan to use CI builders):
 
 ```
-$ git submodule add https://github.com/pawroman/zola-theme-terminimal.git themes/terminal
+$ git submodule add https://github.com/pawroman/zola-theme-terminimal.git themes/terminimal
 ```
 
 Then in your `config.toml` set:
