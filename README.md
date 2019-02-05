@@ -7,7 +7,7 @@
 
 Live demo here: https://pawroman.github.io/zola-theme-terminimal/
 
-Fork (not a port) of "Terminal" Hugo theme
+This theme is a fork (not a port) of "Terminal" Hugo theme
 by Radosław Kozieł (aka. panr):
 https://github.com/panr/hugo-theme-terminal
 

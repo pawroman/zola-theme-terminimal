@@ -17,7 +17,7 @@
             {% endfor -%}
 
             {%- for item in menu_items %}
-                {%- set blog_post = not current_item and item.url == "/" -%}
+                {%- set blog_post = not current_item and item.url == "$BASE_URL" -%}
                 <li {%- if current_item and item == current_item or blog_post %} class="active" {%- endif %}>
                     {%- if item.newtab -%}
                         <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) | safe }}" target="_blank" rel="noopener noreferrer">{{ item.name | safe }}</a>
