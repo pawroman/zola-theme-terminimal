@@ -241,7 +241,7 @@ and intra-post (you can navigate to earlier and later posts).
 To make sure pagination works properly, you must first configure
 it in `content/_index.md`:
 
-```toml
+```
 +++
 # number of pages to paginate by
 paginate_by = 2
