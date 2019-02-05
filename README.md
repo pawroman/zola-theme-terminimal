@@ -282,9 +282,12 @@ default_language = "en"
 
 ### Hack font subset
 
-By default, the theme uses a subset of the Hack font.
+By default, the theme uses a mixed subset of the Hack font.
+Normal weight font uses full character set
+(for Unicode icons and special symbols), but all others
+(bold, italic etc) use a limited subset.
 
-This results in much smaller transfer sizes, but
+This results in much smaller transfer sizes, but the subset
 might not contain all the Unicode characters you need.
 
 You can enable full unicode support in `config.toml`:

@@ -6,7 +6,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'Hack';
-  src: url('fonts/hack-regular-subset.woff2?sha=3114f1256') format('woff2'), url('fonts/hack-regular-subset.woff?sha=3114f1256') format('woff');
+  /* Use full version (not a subset) for unicode icon support */
+  src: url('fonts/hack-regular.woff2?sha=3114f1256') format('woff2'), url('fonts/hack-regular.woff?sha=3114f1256') format('woff');
   font-weight: 400;
   font-style: normal;
 }
