@@ -5,9 +5,11 @@
         <nav class="menu">
             <ul class="menu__inner">
             {%- for item in menu_items %}
-                {%- set current = item.url == current_path
-                    or item.url == "/" ~ current_path
-                    or item.url ~ "/" == "/" ~ current_path
+                {%- set rel_item_url = item.url | replace(from="$BASE_URL", to="") -%}
+                {%- set current = rel_item_url == current_path
+                    or rel_item_url == "/" ~ current_path
+                    or rel_item_url ~ "/" == "/" ~ current_path
+                    or rel_item_url == "" and current_path == "/"
                 -%}
                 {%- if current %}
                     {%- set_global current_item = item -%}
@@ -18,9 +20,9 @@
                 {%- set blog_post = not current_item and item.url == "/" -%}
                 <li {%- if current_item and item == current_item or blog_post %} class="active" {%- endif %}>
                     {%- if item.newtab -%}
-                        <a href="{{ item.url | safe }}" target="_blank" rel="noopener noreferrer">{{ item.name | safe }}</a>
+                        <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) | safe }}" target="_blank" rel="noopener noreferrer">{{ item.name | safe }}</a>
                     {%- else -%}
-                        <a href="{{ item.url | safe }}">{{ item.name | safe }}</a>
+                        <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) | safe }}">{{ item.name | safe }}</a>
                     {%- endif -%}
                 </li>
             {% endfor -%}

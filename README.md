@@ -204,13 +204,14 @@ of your `config.toml`:
 # menu is enabled by adding menu_items (optional)
 menu_items = [
     # each of these is optional, name and url are required
-    {name = "blog", url = "/"},
+    # $BASE_URL is going to be substituted by base_url from configuration
+    {name = "blog", url = "$BASE_URL"},
     
     # tags should only be enabled if you have "tags" taxonomy
     # see documentation below for more details
-    {name = "tags", url = "/tags"},
-    {name = "archive", url = "/archive"},
-    {name = "about me", url = "/about"},
+    {name = "tags", url = "$BASE_URL/tags"},
+    {name = "archive", url = "$BASE_URL/archive"},
+    {name = "about me", url = "$BASE_URL/about"},
     
     # set newtab to true to make the link open in new tab
     {name = "github", url = "url-to-your-github", newtab = true},
