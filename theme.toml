@@ -1,0 +1,45 @@
+name = "terminimal"
+description = "A minimal retro theme"
+license = "MIT"
+homepage = "https://github.com/pawroman/zola-theme-terminimal/"
+min_version = "0.5.1"
+
+# An optional live demo URL
+demo = ""
+
+[author]
+name = "Paweł Romanowski"
+homepage = "https://pawroman.gitlab.io/"
+
+# The original theme this one's been forked off.
+[original]
+author =  "Radosław Kozieł"
+homepage = "https://radoslawkoziel.pl/"
+repo = "https://github.com/panr/hugo-theme-terminal"
+
+[extra]
+
+# One of: blue, green, orange, pink, red.
+accent_color = "blue"
+
+# One of: blue, dark, green, orange, pink, red.
+# Enabling dark background will also modify primary font color
+# to be darker.
+# Defaults to accent color (or, if not accent color specified, to blue).
+background_color = "blue"
+
+# The logo text - defaults to 2 non-breaking spaces.
+logo_text = "Terminimal theme"
+
+# Whether to show links to earlier and later posts
+# on each post page.
+enable_post_view_navigation = true
+
+# The text shown at the bottom of a post,
+# before earlier/later post links.
+post_view_navigation_prompt = "Thanks for reading! Read other posts?"
+
+# Use full Hack character set, not just a subset.
+# Switch this to true if you need full unicode support.
+# Defaults to false.
+use_full_hack_font = false

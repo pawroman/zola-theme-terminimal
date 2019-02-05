@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <div class="post">
+        <h1 class="post-title">
+            tag: #{{ term.name }}
+            ({{ term.pages | length }} post{{ term.pages | length | pluralize }})
+        </h1>
+
+        <a href="/tags">
+            Show all tags
+        </a>
+
+        {{ post_macros::list_posts(pages=term.pages) }}
+    </div>
+{% endblock content %}

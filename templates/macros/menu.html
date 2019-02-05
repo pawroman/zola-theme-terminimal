@@ -1,0 +1,31 @@
+{% macro menu(config, current_path) %}
+    {%- if config.extra.menu_items %}
+        {%- set menu_items = config.extra.menu_items -%}
+
+        <nav class="menu">
+            <ul class="menu__inner">
+            {%- for item in menu_items %}
+                {%- set current = item.url == current_path
+                    or item.url == "/" ~ current_path
+                    or item.url ~ "/" == "/" ~ current_path
+                -%}
+                {%- if current %}
+                    {%- set_global current_item = item -%}
+                {% endif -%}
+            {% endfor -%}
+
+            {%- for item in menu_items %}
+                {%- set blog_post = not current_item and item.url == "/" -%}
+                <li {%- if current_item and item == current_item or blog_post %} class="active" {%- endif %}>
+                    {%- if item.newtab -%}
+                        <a href="{{ item.url | safe }}" target="_blank" rel="noopener noreferrer">{{ item.name | safe }}</a>
+                    {%- else -%}
+                        <a href="{{ item.url | safe }}">{{ item.name | safe }}</a>
+                    {%- endif -%}
+                </li>
+            {% endfor -%}
+            </ul>
+        </nav>
+    {% endif -%}
+{% endmacro menu %}
+

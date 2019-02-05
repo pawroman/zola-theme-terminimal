@@ -1,0 +1,15 @@
+dist: xenial
+
+before_install:
+  - sudo snap install --edge --classic zola
+
+before_script:
+  - zola build
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  local-dir: public
+  verbose: true
