@@ -65,7 +65,7 @@ Option A: clone the theme directly into your Zola site folder:
 $ git clone https://github.com/pawroman/zola-theme-terminimal.git themes/terminimal
 ```
 
-Option B: also include it as a git submodule (it's better if you plan to use CI builders):
+Option B: include it as a git submodule (it's better if you plan to use CI builders):
 
 ```
 $ git submodule add https://github.com/pawroman/zola-theme-terminimal.git themes/terminimal
