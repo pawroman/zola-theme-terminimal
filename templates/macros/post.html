@@ -70,6 +70,9 @@
 {% macro list_posts(pages) %}
     <ul>
     {%- for page in pages %}
+        {%- if page.draft %}
+            {% continue %}
+        {% endif -%}
         <li class="post-list">
             <a href="{{ page.permalink }}">
                 <span class="post-date">{{ page.date }}</span>
