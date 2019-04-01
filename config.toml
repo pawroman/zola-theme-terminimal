@@ -70,3 +70,10 @@ post_view_navigation_prompt = "Thanks for reading! Read other posts?"
 # Switch this to true if you need full unicode support.
 # Defaults to false.
 use_full_hack_font = false
+
+# Optional: Global favicon URL and mimetype.
+#           Mimetype defaults to "image/x-icon".
+#           The URL should point at a file located
+#           in your site's "static" directory.
+# favicon = "/favicon.png"
+# favicon_mimetype = "image/png"

@@ -14,6 +14,10 @@
         <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") }}">
     {% endif -%}
 
+    {%- if config.extra.favicon %}
+        <link rel="icon" type="{{ config.extra.favicon_mimetype | default(value="image/x-icon") }}" href="{{ config.extra.favicon }}">
+    {% endif -%}
+
     {%- block extra_head %}
     {% endblock extra_head -%}
 </head>

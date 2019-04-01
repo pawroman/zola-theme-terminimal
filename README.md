@@ -303,6 +303,20 @@ use_full_hack_font = true
 
 Also see [Hack's docs](https://github.com/source-foundry/Hack/blob/master/docs/WEBFONT_USAGE.md).
 
+### Favicon
+
+The theme supports adding a global favicon (applies to
+all pages) to the site:
+
+```toml
+# Optional: Global favicon URL and mimetype.
+#           Mimetype defaults to "image/x-icon".
+#           The URL should point at a file located
+#           in your site's "static" directory.
+favicon = "/favicon.png"
+favicon_mimetype = "image/png"
+```
+
 All the configuration options are also described in
 [`config.toml`](../blob/master/config.toml).
 
