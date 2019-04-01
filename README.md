@@ -318,7 +318,7 @@ favicon_mimetype = "image/png"
 ```
 
 All the configuration options are also described in
-[`config.toml`](../blob/master/config.toml).
+[`config.toml`](../master/config.toml).
 
 ## Extending
 
