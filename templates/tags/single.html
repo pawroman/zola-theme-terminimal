@@ -7,7 +7,7 @@
             ({{ term.pages | length }} post{{ term.pages | length | pluralize }})
         </h1>
 
-        <a href="{{ config.base_url }}/tags">
+        <a href="{{ config.base_url | safe }}/tags">
             Show all tags
         </a>
 

@@ -5,7 +5,7 @@
         </div>
         <div>
             <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
-            <a class="read-more button" href="{{ page.permalink }}">
+            <a class="read-more button" href="{{ page.permalink | safe }}">
                 <span class="button__text">Read more</span>&nbsp;
                 <span class="button__icon">&#8617;&#xFE0E;</span>
             </a>
@@ -37,7 +37,7 @@
             <div class="pagination__buttons">
                 {%- if page.later %}
                     <span class="button previous">
-                        <a href="{{ page.later.permalink }}">
+                        <a href="{{ page.later.permalink | safe }}">
                             <span class="button__icon">←</span>&nbsp;
                             <span class="button__text">{{ page.later.title }}</span>
                         </a>
@@ -45,7 +45,7 @@
                 {% endif %}
                 {% if page.earlier %}
                     <span class="button next">
-                        <a href="{{ page.earlier.permalink }}">
+                        <a href="{{ page.earlier.permalink | safe }}">
                             <span class="button__text">{{ page.earlier.title }}</span>&nbsp;
                             <span class="button__icon">→</span>
                         </a>
@@ -58,7 +58,7 @@
 
 
 {% macro header(page) %}
-    <h1 class="post-title"><a href="{{ page.permalink }}">{{ page.title }}</a></h1>
+    <h1 class="post-title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h1>
     <div class="post-meta-inline">
         {{ post_macros::date(page=page) }}
     </div>
@@ -74,7 +74,7 @@
             {% continue %}
         {% endif -%}
         <li class="post-list">
-            <a href="{{ page.permalink }}">
+            <a href="{{ page.permalink | safe }}">
                 <span class="post-date">{{ page.date }}</span>
                 :: <span class="post-list-title">{{ page.title }}</span></a>
             {{ post_macros::tags(page=page, short=true) }}
@@ -95,7 +95,7 @@
                 {%- set sep = "&nbsp;" -%}
             {% endif -%}
             {%- for tag in page.taxonomies.tags %}
-                <a class="post-tag" href="{{ get_taxonomy_url(kind='tags', name=tag) }}">#{{ tag }}</a>
+                <a class="post-tag" href="{{ get_taxonomy_url(kind='tags', name=tag) | safe }}">#{{ tag }}</a>
                 {%- if not loop.last %}{{ sep | safe }}{% endif -%}
             {% endfor -%}
         </span>

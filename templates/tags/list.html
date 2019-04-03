@@ -7,7 +7,7 @@
         <ul>
             {% for term in terms %}
             <li class="tag-list">
-                <a href="{{ term.permalink }}">
+                <a href="{{ term.permalink | safe }}">
                     {{ term.name }} ({{ term.pages | length }} post{{ term.pages | length | pluralize }})
                 </a>
             </li>
