@@ -15,7 +15,7 @@
     {% endif -%}
 
     {%- if config.extra.favicon %}
-        <link rel="icon" type="{{ config.extra.favicon_mimetype | default(value="image/x-icon") }}" href="{{ config.extra.favicon }}">
+        <link rel="shortcut icon" type="{{ config.extra.favicon_mimetype | default(value="image/x-icon") }}" href="{{ config.extra.favicon }}">
     {% endif -%}
 
     {%- block extra_head %}
