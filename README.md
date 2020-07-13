@@ -7,6 +7,10 @@
 
 Live demo here: https://pawroman.github.io/zola-theme-terminimal/
 
+Tested with Zola v0.11.0.
+
+#### Fork disclaimer
+
 This theme is a fork (not a port) of "Terminal" Hugo theme
 by Radosław Kozieł (aka. panr):
 https://github.com/panr/hugo-theme-terminal

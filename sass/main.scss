@@ -144,6 +144,12 @@ pre {
     white-space: pre-wrap;
     word-wrap: break-word;
   }
+
+  code {
+    padding: 0;
+    margin: 0;
+    background: none;
+  }
 }
 
 blockquote {
