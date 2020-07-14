@@ -1,12 +1,13 @@
-dist: xenial
+dist: bionic
 
 language: generic
 
 before_install:
-  - sudo snap install --edge zola
+  - curl -L https://github.com/getzola/zola/releases/download/v0.11.0/zola-v0.11.0-x86_64-unknown-linux-gnu.tar.gz > zola.tar.gz
+  - tar -xzf zola.tar.gz
 
 before_script:
-  - zola build
+  - ./zola build
 
 deploy:
   provider: pages
