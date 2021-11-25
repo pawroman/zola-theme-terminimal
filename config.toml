@@ -1,6 +1,6 @@
 # Be sure to change these!
 base_url = "https://zola-theme-terminimal.pages.dev/"
-title = "Zola Terminimal theme"
+title = "Tech it Yourself"
 
 # Sass compilation is required
 compile_sass = true
@@ -27,7 +27,7 @@ accent_color = "green"
 background_color = "blue"
 
 # The logo text - defaults to "Terminimal theme"
-logo_text = "Terminimal theme"
+logo_text = "Tech it Yourself"
 
 # The logo link - defaults to base_url.
 #logo_home_link = "/take/me/away!"
