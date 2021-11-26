@@ -24,7 +24,7 @@ accent_color = "green"
 # Enabling dark background will also modify primary font color
 # to be darker.
 # Defaults to accent color (or, if not accent color specified, to blue).
-background_color = "blue"
+background_color = "dark"
 
 # The logo text - defaults to "Terminimal theme"
 logo_text = "Tech it Yourself"
@@ -35,7 +35,7 @@ logo_text = "Tech it Yourself"
 # Author name: when specified, modifies the default
 # copyright text. Apart from author, it will
 # contain current year and a link to the theme.
-#author = "My Name"
+author = "Kyle J Carlton"
 
 # Copyright text in HTML format. If specified,
 # entirely replaces default copyright and author.
@@ -54,7 +54,7 @@ menu_items = [
     {name = "about me", url = "$BASE_URL/about"},
 
     # set newtab to true to make the link open in new tab
-    {name = "github", url = "https://github.com/pawroman/zola-theme-terminimal", newtab = true},
+    {name = "github", url = "https://github.com/kylejcarlton", newtab = true},
 ]
 
 # Whether to show links to earlier and later posts
@@ -64,7 +64,7 @@ enable_post_view_navigation = true
 # The text shown at the bottom of a post,
 # before earlier/later post links.
 # Defaults to "Thanks for reading! Read other posts?"
-post_view_navigation_prompt = "Thanks for reading! Read other posts?"
+post_view_navigation_prompt = "Thanks for reading! Check out more?"
 
 # Use full Hack character set, not just a subset.
 # Switch this to true if you need full unicode support.
