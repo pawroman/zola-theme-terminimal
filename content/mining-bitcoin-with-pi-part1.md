@@ -3,12 +3,12 @@ title = "Mining Bitcoin with Pi - Part I"
 date = 2015-08-15
 
 [taxonomies]
-tags = ["RaspberryPi", "Bitcoin", "Cryptocurrency"]
+tags = ["RaspberryPi", "Bitcoin"]
 +++
 
-In early 2013 I heard about Bitcoin and decided the best way to learn about it would be to start mining. If you don’t know anything about Bitcoin, check out the video below and [bitcoin.org](https://bitcoin.org/en/) for more. 
+I first heard about Bitcoin in early 2013 and decided the best way to learn about it would be to start mining. If you don’t know anything about Bitcoin, check out the video below and [bitcoin.org](https://bitcoin.org/en/) for more. 
 
-
+{{ youtube(id="Gc2en3nHxA4", class="youtube")}}
 
 I ordered the [Butterfly Labs](https://en.bitcoinwiki.org/wiki/Butterfly_Labs) 5 GH/s Miner in July of 2013 and actually received it in December 2013, ASIC mining was catching on like wildfire and they had a decent backlog of orders to fulfill. The most similar product they offer currently is a 10 GH/s miner. The miner connects as a peripheral via USB, so I started mining with it connected to my Windows 7 lap top using the EasyMiner Software. This reliance on my lap top to “drive” the miner wasn’t optimal, so I found a Linux based alternative that runs on Raspberry Pi called [MinePeon](https://minepeon.com/). Now I had a reliable hardware setup that required little maintenance and more importantly my lap top was free to roam. 
 
