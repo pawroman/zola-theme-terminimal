@@ -48,3 +48,44 @@ _**/etc/modules**_
 lirc_dev    
 lirc_rpi gpio_in_pin=23 gpio_out_pin=22
 ```
+
+_**/etc/lirc/hardware.conf**_
+```bash
+########################################################
+# /etc/lirc/hardware.conf    
+#    
+# Arguments which will be used when launching lircd    
+LIRCD_ARGS="--uinput"    
+# Don't start lircmd even if there seems to be a good config file    
+# START_LIRCMD=false    
+# Don't start irexec, even if a good config file seems to exist.    
+# START_IREXEC=false    
+# Try to load appropriate kernel modules LOAD_MODULES=true    
+# Run "lircd --driver=help" for a list of supported drivers.    
+DRIVER="default"    
+# usually /dev/lirc0 is the correct setting for systems using udev    
+DEVICE="/dev/lirc0"    
+MODULES="lirc_rpi"
+# Default configuration files for your hardware if any    
+LIRCD_CONF="" LIRCMD_CONF=""    
+######################################################## 
+```
+
+- Restart LIRC to pick up these changes:
+```bash
+sudo /etc/init.d/lirc stop
+mode2 -d /dev/lirc0
+```
+
+- Pressing buttons on an IR remote pointed at the receiver and activity similar to the following should be displayed:
+
+```bash
+space 16300    
+pulse 95    
+space 28794    
+pulse 80    
+space 19395    
+pulse 83  
+```
+
+In the next post on this topic I’ll cover recording the IR signal from remotes using the [irrecord command](http://www.lirc.org/html/irrecord.html) and testing functionality from the command line. I’ll also install [Node.js](https://nodejs.org/) and the client library [lirc_node](https://github.com/alexbain/lirc_node) for controlling LIRC from a web site.
