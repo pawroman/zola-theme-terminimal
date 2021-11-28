@@ -20,3 +20,17 @@ Since I’d like to connect over WiFi I’ve added a [Belkin USB F7D2101](https:
 
 {{ image(src="https://raw.githubusercontent.com/kylejcarlton/zola-theme-terminimal/master/img/RemoteBuildWirelessBT.png", position="left") }}
 
+- With the Pi temporarily connected by Ethernet cable, I [set up the wireless connection via the command line](https://www.raspberrypi.com/documentation/computers/configuration.html) over SSH.
+- The following commands update the Software and Firmware then sync the Time with a source on the Internet:
+
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+sudo apt-get install git-core
+sudo wget http://goo.gl/1BOfJ -O /usr/bin/rpi-update && sudo chmod +x /usr/bin/rpi-update
+sudo rpi-update
+
+sudo apt-get install ntpdate
+sudo ntpdate -u ntp.ubuntu.com
+```
