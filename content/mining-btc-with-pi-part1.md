@@ -1,9 +1,9 @@
 +++
-title = "Mining Bitcoin with Pi - Part I"
+title = "Mining BTC with Pi - Part I"
 date = 2015-08-15
 
 [taxonomies]
-tags = ["RaspberryPi", "Bitcoin"]
+tags = ["RaspberryPi", "BTC"]
 +++
 
 I first heard about Bitcoin in early 2013 and decided the best way to learn about it would be to start mining. If you don’t know anything about Bitcoin, check out the video below and [bitcoin.org](https://bitcoin.org/en/) for more. 

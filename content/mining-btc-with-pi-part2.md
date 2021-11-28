@@ -1,9 +1,9 @@
 +++
-title = "Mining Bitcoin with Pi - Part II"
+title = "Mining BTC with Pi - Part II"
 date = 2015-10-16
 
 [taxonomies]
-tags = ["RaspberryPi", "Bitcoin"]
+tags = ["RaspberryPi", "BTC"]
 +++
 
 I mined a total of 0.24359921 Bitcoin (BTC) with the Raspberry Pi and Butterfly Labs 5 GH/s miner from December 17, 2013 - July 29, 2015. 

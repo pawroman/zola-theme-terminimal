@@ -10,7 +10,7 @@ tags = ["RaspberryPi", "UniversalRemote"]
 
 With the hardware built the next step is getting the Raspberry Pi up and running and installing [LIRC](http://www.lirc.org/). [Alexba.in](http://alexba.in/) has a comprehensive post for both of these things: [RaspberryPi Quickstart](http://alexba.in/blog/2013/01/04/raspberrypi-quickstart/) and [Setting Up LIRC on the RaspberryPi](http://alexba.in/blog/2013/01/06/setting-up-lirc-on-the-raspberrypi/). 
 
-I discovered and modified a few things along the way, so here’s what I did.
+I discovered and modified a few things along the way, so here’s what I did:
 
 - Download the latest [Raspbian Image](https://www.raspberrypi.org/downloads/raspbian/) and follow their [Installation Guide](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
 - Network the Pi over wired Ethernet using RJ45 connector.
@@ -21,6 +21,7 @@ Since I’d like to connect over WiFi I’ve added a [Belkin USB F7D2101](https:
 {{ image(src="https://raw.githubusercontent.com/kylejcarlton/zola-theme-terminimal/master/img/RemoteBuildWirelessBT.png", position="left") }}
 
 - With the Pi temporarily connected by Ethernet cable, I [set up the wireless connection via the command line](https://www.raspberrypi.com/documentation/computers/configuration.html) over SSH.
+
 - The following commands update the Software and Firmware then sync the Time with a source on the Internet:
 
 ```bash
@@ -33,4 +34,17 @@ sudo rpi-update
 
 sudo apt-get install ntpdate
 sudo ntpdate -u ntp.ubuntu.com
+```
+
+- Next install [LIRC](http://www.lirc.org/)
+```bash
+sudo apt-get install lirc
+```
+- Modify **/etc/modules** and **/etc/lirc/hardware.conf** for the specific hardware being used:
+
+
+_**/etc/modules**_
+```bash
+lirc_dev    
+lirc_rpi gpio_in_pin=23 gpio_out_pin=22
 ```
