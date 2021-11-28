@@ -8,8 +8,7 @@ tags = ["RaspberryPi", "UniversalRemote"]
 
 I purchased the [Prototyping Pi Plate directly from adafruit](https://www.adafruit.com/product/801), and the [Raspberry Pi from Amazon](https://www.amazon.com/Raspberry-Pi-Motherboard-RASPBRRYPCBA512-MC-RP001-CLR/dp/B01CF0RTUG). The [IR Transmitters, Right Angle Mounts, Transistor, Resistor and IR Receiver from Mouser](http://www.mouser.com/). [The 22 AWG solid wire and soldering supplies from Fry’s](http://www.frys.com/).
 
-{{ image(src="https://raw.githubusercontent.com/kylejcarlton/zola-theme-terminimal/master/img/OpensourceRemoteParts.png",
-         position="left") }}
+{{ image(src="https://raw.githubusercontent.com/kylejcarlton/zola-theme-terminimal/master/img/OpensourceRemoteParts.png", position="left") }}
 
 
 Parts List:
