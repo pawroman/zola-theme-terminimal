@@ -18,7 +18,7 @@ I discovered and modified a few things along the way, so here’s what I did:
 
 Since I’d like to connect over WiFi I’ve added a [Belkin USB F7D2101](https://www.belkin.com/us/support-product?pid=01t80000002G16OAAS). For future development, I also added a [ORICO BTA-402 USB Bluetooth 4.0 Micro Adapter Dongle](https://www.amazon.com/ORICO-Bluetooth-Adapter-Windows-Consumption/dp/B01827IICO) for controlling a Play Station 3 using [GIMX](https://gimx.fr/wiki/index.php?title=Main_Page).
 
-{{ image(src="https://raw.githubusercontent.com/kylejcarlton/zola-theme-terminimal/master/img/RemoteBuildWirelessBT.png", position="left") }}
+{{ image(src="https://raw.githubusercontent.com/kylejcarlton/zola-theme-terminimal/master/img/RemoteBuildWirelessBT.jpg", position="left") }}
 
 - With the Pi temporarily connected by Ethernet cable, I [set up the wireless connection via the command line](https://www.raspberrypi.com/documentation/computers/configuration.html) over SSH.
 
@@ -51,7 +51,7 @@ lirc_rpi gpio_in_pin=23 gpio_out_pin=22
 
 _**/etc/lirc/hardware.conf**_
 ```bash
-########################################################
+######################
 # /etc/lirc/hardware.conf    
 #    
 # Arguments which will be used when launching lircd    
@@ -68,7 +68,7 @@ DEVICE="/dev/lirc0"
 MODULES="lirc_rpi"
 # Default configuration files for your hardware if any    
 LIRCD_CONF="" LIRCMD_CONF=""    
-######################################################## 
+###################### 
 ```
 
 - Restart LIRC to pick up these changes:
