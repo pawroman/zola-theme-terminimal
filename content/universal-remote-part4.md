@@ -18,6 +18,8 @@ I discovered and modified a few things along the way, so here’s what I did:
 
 Since I’d like to connect over WiFi I’ve added a [Belkin USB F7D2101](https://www.belkin.com/us/support-product?pid=01t80000002G16OAAS). For future development, I also added a [ORICO BTA-402 USB Bluetooth 4.0 Micro Adapter Dongle](https://www.amazon.com/ORICO-Bluetooth-Adapter-Windows-Consumption/dp/B01827IICO) for controlling a Play Station 3 using [GIMX](https://gimx.fr/wiki/index.php?title=Main_Page).
 
+<!-- more -->
+
 {{ image(src="https://raw.githubusercontent.com/kylejcarlton/zola-theme-terminimal/master/img/RemoteBuildWirelessBT.jpg", position="left") }}
 
 - With the Pi temporarily connected by Ethernet cable, I [set up the wireless connection via the command line](https://www.raspberrypi.com/documentation/computers/configuration.html) over SSH.

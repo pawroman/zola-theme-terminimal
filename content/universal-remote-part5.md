@@ -16,6 +16,8 @@ sudo /etc/init.d/lirc stop
 sudo /etc/init.d/lirc start
 ```
 
+<!-- more -->
+
 - Use [irsend](https://www.lirc.org/html/irsend.html) to initiate an IR signal:
 
 ```bash

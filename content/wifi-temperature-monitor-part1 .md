@@ -26,6 +26,8 @@ For my first project with the Photon, I created a wireless temperature monitor t
 }
 ```
 
+<!-- more -->
+
 Then the temperature can be calculated based on the voltage output from the TMP36 using _Temp °C = 100*(reading in V) - 50_.
 
 {{ image(src="https://raw.githubusercontent.com/kylejcarlton/zola-theme-terminimal/master/img/TMP36_Graph.png", position="left") }}
