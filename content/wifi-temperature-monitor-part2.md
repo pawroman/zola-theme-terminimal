@@ -16,8 +16,6 @@ For communication with my Nest Thermostat, I didn’t implement the [OAuth2.0](h
 
 Here are the results after a few days:
 
-```bash
-### iFRAME CHART HERE ###
-```
+<iframe width="697" height="431" seamless frameborder="0" scrolling="no" style="display: block; margin: 0 auto" src="https://docs.google.com/spreadsheets/d/1ir8ENcChkleHsPGUWlmbGlXQQTnxPHI-o29nMX9jvO8/pubchart?oid=280457042&format=interactive"></iframe>
 
 The [Google Sheet](https://docs.google.com/spreadsheets/d/1ir8ENcChkleHsPGUWlmbGlXQQTnxPHI-o29nMX9jvO8/edit) is here (create a copy to view Script Editor and make changes) and I also posted the code as a [Gist here](https://gist.github.com/kylejcarlton/12a85c4a5b375eaff62ee509d76a6720). API keys, device ID’s etc. are all variables to be defined at the beginning of the Script.
