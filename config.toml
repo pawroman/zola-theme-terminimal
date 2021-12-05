@@ -45,7 +45,7 @@ author = "Kyle J Carlton"
 menu_items = [
     # each of these is optional, name and url are required
     # $BASE_URL is going to be substituted by base_url from configuration
-    {name = "blog", url = "$BASE_URL"},
+    {name = "articles", url = "$BASE_URL"},
 
     # tags should only be enabled if you have "tags" taxonomy
     # see documentation below for more details
