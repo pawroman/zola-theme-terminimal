@@ -10,7 +10,7 @@
 
 {% block content %}
 <div class="post">
-  <h1 class="post-title">Lost?</h1>
-  <p>This page does not exist.</p>
+  <h1 class="post-title">{% block heading %}Lost?{% endblock heading %}</h1>
+  <p>{% block message %}This page does not exist.{% endblock message %}</p>
 </div>
 {% endblock content %}
