@@ -35,11 +35,13 @@
                 {% endif -%}
                 <a href="{{ logo_link | safe }}" style="text-decoration: none;">
                     <div class="logo">
+                      {% block logo_content %}
                         {%- if config.extra.logo_text %}
                             {{ config.extra.logo_text }}
                         {% else %}
                             Terminimal theme
                         {% endif -%}
+                        {% endblock logo_content %}
                     </div>
                 </a>
             </div>
