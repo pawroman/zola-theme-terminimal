@@ -1,7 +1,7 @@
 name = "terminimal"
 description = "A simple, minimal retro theme"
 license = "MIT"
-homepage = "https://github.com/pawroman/zola-theme-terminimal/"
+homepage = "https://techiys.com"
 min_version = "0.5.1"
 
 # An optional live demo URL
