@@ -27,7 +27,7 @@ accent_color = "green"
 background_color = "dark"
 
 # The logo text - defaults to "Terminimal theme"
-logo_text = "Tech it Yourself"
+logo_text = "-Tech it Yourself-"
 
 # The logo link - defaults to base_url.
 #logo_home_link = "/take/me/away!"
