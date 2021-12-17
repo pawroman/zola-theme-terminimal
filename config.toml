@@ -75,5 +75,5 @@ use_full_hack_font = false
 #           Mimetype defaults to "image/x-icon".
 #           The URL should point at a file located
 #           in your site's "static" directory.
-favicon = "https://raw.githubusercontent.com/kylejcarlton/zola-theme-terminimal/master/img/favicon-32x32.png"
+favicon = "https://raw.githubusercontent.com/kylejcarlton/zola-theme-terminimal/master/img/favicon.png"
 favicon_mimetype = "image/png"
