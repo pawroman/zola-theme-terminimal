@@ -103,7 +103,7 @@
             {% else %}
                 <div class="copyright">
                     {%- if config.extra.author %}
-                        <span>© {{ date_macros::now_year() }} {{ config.extra.author }}</span>
+                        <span>© 2014 -{{ date_macros::now_year() }} {{ config.extra.author }}</span>
                     {% else %}
                         <span>© {{ date_macros::now_year() }} Powered by <a href="https://www.getzola.org/">Zola</a></span>
                     {% endif -%}
