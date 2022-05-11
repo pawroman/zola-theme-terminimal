@@ -5,9 +5,10 @@
 
 ![Screenshot](../master/screenshot/screenshot.png?raw=true)
 
-Live demo here: https://pawroman.github.io/zola-theme-terminimal/
+See the live demo (of the default configuration) here:
+https://pawroman.github.io/zola-theme-terminimal/
 
-Tested with Zola v0.11.0.
+Tested with Zola v0.15.3.
 
 #### Fork disclaimer
 
