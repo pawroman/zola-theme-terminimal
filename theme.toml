@@ -1,15 +1,15 @@
 name = "terminimal"
 description = "A simple, minimal retro theme"
 license = "MIT"
-homepage = "https://github.com/pawroman/zola-theme-terminimal/"
-min_version = "0.5.1"
+homepage = "https://github.com/pawroman/zola-theme-terminimal"
+min_version = "0.11.0"
 
 # An optional live demo URL
-demo = ""
+demo = "https://pawroman.github.io/zola-theme-terminimal/"
 
 [author]
 name = "Paweł Romanowski"
-homepage = "https://pawroman.gitlab.io/"
+homepage = "https://github.com/pawroman"
 
 # The original theme this one's been forked off.
 [original]
