@@ -1,4 +1,5 @@
 {% macro menu(config, current_path) %}
+    {%- set current_item = false -%}
     {%- if config.extra.menu_items %}
         {%- set menu_items = config.extra.menu_items -%}
 
