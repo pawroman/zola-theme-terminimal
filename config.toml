@@ -58,7 +58,7 @@ menu_items = [
     {name = "github", url = "https://github.com/pawroman/zola-theme-terminimal", newtab = true},
 ]
 
-# Whether to show links to earlier and later posts
+# Whether to show links to earlier and later (aka. higher/lower) posts
 # on each post page (defaults to true).
 enable_post_view_navigation = true
 
