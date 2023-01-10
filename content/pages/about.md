@@ -5,7 +5,7 @@ path = "about"
 
 By day I’m an engineer for a medical software company. After work I enjoy DiY projects of all kinds, riding my bike and live music. I started this site to document my open source projects and ideas.
 
-{{ image(src="https://raw.githubusercontent.com/kylejcarlton/zola-theme-terminimal/master/img/profile.jpeg", position="left") }}
+{{ image(src="/img/profile.jpeg", position="left") }}
 
 Work and recreation take me all over the globe, here’s everywhere I’ve been:
 
