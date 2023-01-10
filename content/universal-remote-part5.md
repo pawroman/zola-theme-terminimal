@@ -45,6 +45,7 @@ node app.js
 ```bash
 sudo nano /etc/init.d/URemote
 ```
+
 ```bash
 #! /bin/sh    
 # /etc/init.d/lirc_web     
@@ -77,37 +78,50 @@ case "$1" in
 esac    
 exit 0  
 ```
+
 - Make the script executable:
+
 ```bash
 sudo chmod 755 /etc/init.d/URemote
 ```
+
 - Test starting and stopping lirc_web with the script:
+
 ```bash
 sudo /etc/init.d/URemote start
 sudo /etc/init.d/URemote stop
 ```
+
 - Register the script to be run at start-up:
+
 ```bash
 sudo update-rc.d URemote defaults
 ```
+
 If your remotes aren’t in the [available index](http://lirc.sourceforge.net/remotes/) or those config files don’t work, [irrecord](http://www.lirc.org/html/irrecord.html) can be used.
+
 - Stop lirc to free up _/dev/lirc0_:
+
 ```bash
 sudo /etc/init.d/lirc stop
 ```
+
 - Create a new remote control configuration file using _/dev/lirc0_ and save the output to _~/lircd.conf_. Once a file is generated for each remote it can be compiled into a single lircd.conf, this is much easier with FTP access. A list of namespace values for buttons is available @ [ocinside.de/modding_en/linux_ir_irrecord_list](http://www.ocinside.de/modding_en/linux_ir_irrecord_list/).
+
 ```bash
 irrecord -d /dev/lirc0 ~/lircd.conf
 ```
+
 - After all the remotes are recorded and compiled, the lircd.conf file can be placed @ _/etc/lirc/_ and then restart LIRC to pick up the new configuration:
+
 ```bash
 sudo /etc/init.d/lirc stop
 sudo /etc/init.d/lirc start
 ```
-To finish of the hardware build I made a case out of Lego bricks, so it stays oriented vertically and has some protection. 
-{{ image(src="https://raw.githubusercontent.com/kylejcarlton/zola-theme-terminimal/master/img/UniversalRemoteLegoCase.png", position="left") }}
+
+To finish of the hardware build I made a case out of Lego bricks, so it stays oriented vertically and has some protection.
+{{ image(src="/img/UniversalRemoteLegoCase.png", position="left") }}
 
 Now control of IR devices is possible from a website, next up controlling Bluetooth devices the same way using [GIMX](http://gimx.fr/wiki/index.php?title=Command_line).
 
-{{ image(src="https://raw.githubusercontent.com/kylejcarlton/zola-theme-terminimal/master/img/UniversalRemoteWebsite.png", position="left") }}
-
+{{ image(src="https://raw.githubusercontent.com/kylejcarlton/zola-theme-terminimal/master/img/UniversalRemoteWebsite.png", position="left"

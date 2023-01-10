@@ -30,9 +30,8 @@ For my first project with the Photon, I created a wireless temperature monitor t
 
 Then the temperature can be calculated based on the voltage output from the TMP36 using _Temp °C = 100*(reading in V) - 50_.
 
-{{ image(src="https://raw.githubusercontent.com/kylejcarlton/zola-theme-terminimal/master/img/TMP36_Graph.png", position="left") }}
+{{ image(src="/img/TMP36_Graph.png", position="left") }}
 
 After importing I also converted to Fahrenheit using _T(°F) = T(°C) × 1.8 + 32_. Here’s the final output in the Google Sheet using _ImportJSON(https://api.particle.io/v1/devices/UNIQUE_ID/analogvalue?access_token=UNIQUE_TOKEN)_:
 
-
-{{ image(src="https://raw.githubusercontent.com/kylejcarlton/zola-theme-terminimal/master/img/TMP36_Gsheet.png", position="left") }}
+{{ image(src="/img/TMP36_Gsheet.png", position="left") }}

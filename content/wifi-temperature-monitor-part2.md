@@ -10,7 +10,7 @@ Since writing the first WiFi temperature monitor post, I’ve implemented retrie
 
 <!-- more -->
 
-{{ image(src="https://raw.githubusercontent.com/kylejcarlton/zola-theme-terminimal/master/img/Google_Apps_Script_Temp.png", position="left") }}
+{{ image(src="/img/Google_Apps_Script_Temp.png", position="left") }}
 
 For communication with my Nest Thermostat, I didn’t implement the [OAuth2.0](https://oauth.net/2/) standard completely inside the Apps Script; although this would be possible using [apps-script-oauth2](https://github.com/googlesamples/apps-script-oauth2). Following the [REST Quick Guide](https://developers.nest.com/documentation/cloud/how-to-auth), I generated a [PIN for my Nest](https://developers.nest.com/documentation/cloud/authorization-overview#pin-based-authorization) and then used [Postman](https://www.getpostman.com/) to initiate the POST call for the Access Token to be used in the script.
 
