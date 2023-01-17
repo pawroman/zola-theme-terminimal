@@ -20,7 +20,7 @@ Total cost of power over that period of approximately 14,136 hours was calculate
 
 {{ image(src="/img/BTCMinerPowerUsage.png", position="left") }}
 
-Thanks to the technology behind Bitcoin, you can see the full contents of the wallet where mining profits were deposited on [BlockChain.info](https://www.blockchain.com/explorer) @ [1BsWqHJh5kwLNHZzj6Q6DGaxRZVTK9U9A6](https://blockchain.info/address/1BsWqHJh5kwLNHZzj6Q6DGaxRZVTK9U9A6) and a graph over time. 
+Thanks to the technology behind Bitcoin, you can see the full contents of the wallet where mining profits were deposited on [BlockChain.info](https://www.blockchain.com/explorer) @ [1BsWqHJh5kwLNHZzj6Q6DGaxRZVTK9U9A6](https://blockchain.info/address/1BsWqHJh5kwLNHZzj6Q6DGaxRZVTK9U9A6) and a graph over time.
 
 {{ image(src="/img/BTCMinerProfitability.png", position="left") }}
 

@@ -32,6 +32,10 @@ Then the temperature can be calculated based on the voltage output from the TMP3
 
 {{ image(src="/img/TMP36_Graph.png", position="left") }}
 
-After importing I also converted to Fahrenheit using _T(°F) = T(°C) × 1.8 + 32_. Here’s the final output in the Google Sheet using _ImportJSON(https://api.particle.io/v1/devices/UNIQUE_ID/analogvalue?access_token=UNIQUE_TOKEN)_:
+After importing I also converted to Fahrenheit using _T(°F) = T(°C) × 1.8 + 32_. Here’s the final output in the Google Sheet using
+
+```javascript
+ImportJSON(https://api.particle.io/v1/devices/UNIQUE_ID/analogvalue?access_token=UNIQUE_TOKEN)
+```
 
 {{ image(src="/img/TMP36_Gsheet.png", position="left") }}

@@ -6,7 +6,7 @@ date = 2015-08-15
 tags = ["RaspberryPi", "BTC"]
 +++
 
-I first heard about Bitcoin in early 2013 and decided the best way to learn about it would be to start mining. If you don’t know anything about Bitcoin, check out the video below and [bitcoin.org](https://bitcoin.org/en/) for more. 
+I first heard about Bitcoin in early 2013 and decided the best way to learn about it would be to start mining. If you don’t know anything about Bitcoin, check out the video below and [bitcoin.org](https://bitcoin.org/en/) for more.
 
 <!--{{ youtube(id="Gc2en3nHxA4", class="youtube")}}-->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Gc2en3nHxA4" frameborder="0" style="margin: 0 auto" allowfullscreen></iframe>
