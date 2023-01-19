@@ -1,7 +1,7 @@
 +++
 title = "Nest Thermostat Logger"
 date = 2022-12-24
-draft = false
+draft = true
 
 [taxonomies]
 tags = ["Nest", "Google", "API", "DeviceAccess", "OAuth2", "Temperature", "Humidity", "Weather"]
