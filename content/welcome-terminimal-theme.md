@@ -1,5 +1,5 @@
 +++
-title = "Terminimal Theme for Zola"
+title = "Welcome to Terminimal Theme for Zola"
 date = 2019-02-04
 
 [taxonomies]
