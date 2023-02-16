@@ -15,17 +15,17 @@ Since access to the SDM API is through [Google Cloud Platform (GCP)](https://clo
 
 My final step in setup was to create a project in Device Access, so I have the Project UUID needed to make SDM API calls.
 
+<!-- more -->
+
 Authorizing an account through this link allows granting access to my nest:
 
-[https://nestservices.google.com/partnerconnections/**project-id**/auth?redirect_uri=https://www.google.com&access_type=offline&prompt=consent&client_id=**oauth2-client-id**&response_type=code&scope=https://www.googleapis.com/auth/sdm.service](https://nestservices.google.com/partnerconnections/project-id/auth?redirect_uri=https://www.google.com&access_type=offline&prompt=consent&client_id=oauth2-client-id&response_type=code&scope=https://www.googleapis.com/auth/sdm.service)
+>[https://nestservices.google.com/partnerconnections/***project-id***/auth?redirect_uri=https://www.google.com&access_type=offline&prompt=consent&client_id=<font color="green">***oauth2-client-id***</font>&response_type=code&scope=https://www.googleapis.com/auth/sdm.service](https://nestservices.google.com/partnerconnections/project-id/auth?redirect_uri=https://www.google.com&access_type=offline&prompt=consent&client_id=oauth2-client-id&response_type=code&scope=https://www.googleapis.com/auth/sdm.service)
 
 This redirects to [google.com](https://www.google.com) and returns the authorization code in the address bar:
 
-[https://www.google.com?code=**authorization-code**&scope=https://www.googleapis.com/auth/sdm.service](https://www.google.com?code=authorization-code&scope=https://www.googleapis.com/auth/sdm.service
+>[https://www.google.com?code=**authorization-code**&scope=https://www.googleapis.com/auth/sdm.service](https://www.google.com?code=authorization-code&scope=https://www.googleapis.com/auth/sdm.service
 )
 
 This [curl](https://curl.se/) request returns the access and refresh tokens:
 
-```bash
-$ curl -L -X POST 'https://www.googleapis.com/oauth2/v4/token?client_id=oauth2-client-id&client_secret=oauth2-client-secret&code=authorization-code&grant_type=authorization_code&redirect_uri=https://www.google.com'
-```
+> $ curl -L -X POST [https://www.googleapis.com/oauth2/v4/token?client_id=oauth2-client-id&client_secret=oauth2-client-secret&code=authorization-code&grant_type=authorization_code&redirect_uri=https://www.google.com](https://www.googleapis.com/oauth2/v4/token?client_id=oauth2-client-id&client_secret=oauth2-client-secret&code=authorization-code&grant_type=authorization_code&redirect_uri=https://www.google.c
