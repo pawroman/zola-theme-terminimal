@@ -34,3 +34,13 @@ This [curl](https://curl.se/) request returns the access and refresh tokens (rep
 ```bash
 $ curl -L -X POST https://www.googleapis.com/oauth2/v4/token?client_id=${oauth2-client-id}&client_secret=${oauth2-client-secret}&code=${authorization-code}&grant_type=authorization_code&redirect_uri=https://www.google.com
 ```
+
+```json
+{
+  "access_token": "ya29....",
+  "expires_in": 3599,
+  "refresh_token": "1//01...",
+  "scope": "https://www.googleapis.com/auth/sdm.service",
+  "token_type": "Bearer"
+}
+```
