@@ -7,16 +7,16 @@ draft = false
 tags = ["Nest", "Google", "API", "DeviceAccess", "OAuth2", "Temperature", "Humidity", "Weather"]
 +++
 
-Since [Works with Nest (WWN)](https://developers.nest.com/) is retiring, I decided to configure [Device Access](https://developers.google.com/nest/device-access/get-started) and check out the Smart Device Management (SDM) API. The Quick Start Guide on the Device Access page is very comprehensive, and here's what I did to get a log of temperature and humidity from my Nest and corresponding outdoor values.
+Since [Works with Nest (WWN)](https://developers.nest.com/) is retiring, I decided to configure [Device Access](https://developers.google.com/nest/device-access/get-started) and check out the Smart Device Management (SDM) Application Programming Interface (API). The Quick Start Guide on the Device Access page is very comprehensive, and here's what I did to get a log of temperature and humidity from my Nest and corresponding outdoor values.
 
 {{ image(src="/img/NestandOutside.png", position="left") }}
 <!-- more -->
 
 First I paid the seemingly unavoidable one-time, non-refundable $5 USD fee and accepted both the [Google API](https://developers.google.com/terms) and [Device Access Sandbox](https://developers.google.com/nest/device-access/tos) Terms of Service.
 
-Since access to the SDM API is through [Google Cloud Platform (GCP)](https://cloud.google.com/gcp/) I created a project and enabled the Smart Device Management API from the [API Enablement](https://console.developers.google.com/apis/library/smartdevicemanagement.googleapis.com) page and created an OAuth 2.0 Client ID on the [Credentials](https://console.developers.google.com/apis/credentials) page.
+Since access to the SDM API is through [Google Cloud Platform (GCP)](https://cloud.google.com/gcp/) I created a [project](https://developers.google.com/workspace/marketplace/create-gcp-project). Then enabled the Smart Device Management API from the [API Enablement](https://console.developers.google.com/apis/library/smartdevicemanagement.googleapis.com) page and created an [OAuth 2.0](https://oauth.net/2/) Client ID on the [Credentials](https://console.developers.google.com/apis/credentials) page.
 
-My final step in setup was to create a project in Device Access, so I have the Project UUID needed to make SDM API calls.
+My final step in setup was to create a project in Device Access, so I have the project [Universally Unique Identifier (UUID)](https://en.wikipedia.org/wiki/Universally_unique_identifier) needed to make SDM API calls.
 
 <!-- more -->
 
