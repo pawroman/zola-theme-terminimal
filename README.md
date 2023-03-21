@@ -126,7 +126,7 @@ Example:
 ```
 {{ figure(src="http://rustacean.net/assets/rustacean-flat-gesture.png",
           style="width: 25%;",
-          position="right"
+          position="right",
           caption_position="left",
           caption="Ferris, the (unofficial) Rust mascot",
           caption_style="font-weight: bold; font-style: italic;") }}
