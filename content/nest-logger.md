@@ -29,18 +29,4 @@ This redirects to [google.com](https://www.google.com) and returns the authoriza
 >[https://www.google.com?code=***authorization-code***&scope=https://www.googleapis.com/auth/sdm.service](https://www.google.com?code=authorization-code&scope=https://www.googleapis.com/auth/sdm.service
 )
 
-This [curl](https://curl.se/) request returns the access and refresh tokens (replace ***oauth2-client-id***, ***oauth2-client-secret***, and ***authorization-code*** with project values):
-
-```bash
-$ curl -L -X POST https://www.googleapis.com/oauth2/v4/token?client_id=${oauth2-client-id}&client_secret=${oauth2-client-secret}&code=${authorization-code}&grant_type=authorization_code&redirect_uri=https://www.google.com
-```
-
-```json
-{
-  "access_token": "ya29....",
-  "expires_in": 3599,
-  "refresh_token": "1//01...",
-  "scope": "https://www.googleapis.com/auth/sdm.service",
-  "token_type": "Bearer"
-}
-```
+From here the authorization code can be used to obtain both the access and refresh tokens. This project on github is a simple Bash script to accomplish everything once the authorization code is obtained:  [Google-SDM-API-Bash](https://github.com/kylejcarlton/Google-SDM-API-Bash).
