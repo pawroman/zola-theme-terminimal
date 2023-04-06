@@ -3,7 +3,7 @@ title = "WiFi Temperature Monitor - Part I"
 date = 2016-05-22
 
 [taxonomies]
-tags = ["Particle", "WiFiTemp"]
+tags = ["Particle", "Temperature"]
 +++
 
 [Particle.io](https://www.particle.io/) has some relatively inexpensive and lightweight IoT boards that connect via WiFi ([Photon](https://www.particle.io/products/hardware/photon-wifi-dev-kit)) or Cellular Networks ([Electron](https://store.particle.io/collections/electron)). They are focused on providing a fully functioning cloud based IDE for development and production devices. Programming is accomplished via [Wiring](http://wiring.org.co/), the same framework as [Arduino](https://www.arduino.cc/). Since the framework is open source down to the bare metal, you can also use C/C++ or ARM assembly.

@@ -3,7 +3,7 @@ title = "WiFi Temperature Monitor - Part II"
 date = 2016-10-05
 
 [taxonomies]
-tags = ["Particle", "WiFiTemp"]
+tags = ["Particle", "Temperature"]
 +++
 
 Since writing the first WiFi temperature monitor post, I’ve implemented retrieving temperature values on a schedule, to generate a real-time dashboard. I came across this [Gadgets Apps Hacks Post](http://www.gadgetsappshacks.com/2014/01/how-to-record-daily-portfolio-values-in.html), which utilizes [Google Apps Script’s](https://developers.google.com/apps-script/) ability to connect to [External APIs](https://developers.google.com/apps-script/guides/services/external) and record stock ticker values over time in [Google Sheets](https://www.google.com/sheets/about/). The method I used in the first part to write the temperature sensor value in a Sheet is more suited for a single import of a larger data set in JSON format. There is also a [tutorial from Particle](https://docs.particle.io/tutorials/projects/maker-kit/#tutorial-4-temperature-logger) that uses [IFTTT](https://ifttt.com/) to log the data in a Sheet. Although the tutorial from Particle might be a little easier to implement, I chose to work solely with Google Apps Script; since I wanted to pull data from other APIs. I’ll use [WeatherUnderground](https://www.wunderground.com/weather/api/d/docs) for the outside temperature and [Nest](https://developers.nest.com/documentation/cloud/get-started) for a comparison of inside temperature from another device.
