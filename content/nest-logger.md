@@ -7,7 +7,7 @@ draft = false
 tags = ["Nest", "Google", "API", "DeviceAccess", "OAuth2", "Temperature", "Humidity", "Weather"]
 +++
 
-Since [Works with Nest (WWN)](https://developers.nest.com/) is retiring, I decided to configure [Device Access](https://developers.google.com/nest/device-access/get-started) and check out the Smart Device Management (SDM) Application Programming Interface (API). The Quick Start Guide on the Device Access page is very comprehensive, and here's what I did to get a log of temperature and humidity from my Nest and corresponding outdoor values.
+Since [Works with Nest (WWN)](https://developers.nest.com/) is retiring, I decided to configure [Device Access](https://developers.google.com/nest/device-access/get-started) and check out the [Smart Device Management (SDM) Application Programming Interface (API)](https://developers.google.com/nest/device-access/api). The Quick Start Guide on the Device Access page is very comprehensive, and here's what I did to get a log of temperature and humidity from my Nest and corresponding outdoor values.
 
 {{ image(src="/img/NestandOutside.png", position="left") }}
 <!-- more -->
