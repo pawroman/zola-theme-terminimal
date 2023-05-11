@@ -29,8 +29,8 @@
     <header class="header">
         <div class="header__inner">
             <div class="header__logo">
-                {%- if config.logo_home_link %}
-                    {% set logo_link = config.logo_home_link %}
+                {%- if config.extra.logo_home_link %}
+                    {% set logo_link = config.extra.logo_home_link %}
                 {% else %}
                     {% set logo_link = config.base_url %}
                 {% endif -%}
