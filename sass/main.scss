@@ -83,23 +83,17 @@ figure {
   max-width: 100%;
   margin: 25px 0;
 
-  &.left {
-    img {
-      margin-right: auto;
-    }
+  &.left, img {
+    margin-right: auto;
   }
 
-  &.center {
-    img {
-      margin-left: auto;
-      margin-right: auto;
-    }
+  &.center, img {
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  &.right {
-    img {
-      margin-left: auto;
-    }
+  &.right, img {
+    margin-left: auto;
   }
 
   figcaption {
