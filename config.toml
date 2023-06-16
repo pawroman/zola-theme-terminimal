@@ -19,13 +19,14 @@ highlight_theme = "boron"
 
 # One of: blue, green, orange, pink, red.
 # Defaults to blue.
-accent_color = "blue"
+# Append -light for light themes, e.g. blue-light
+# Or append -auto, e.g. blue-auto
+accent_color = "blue-auto"
 
-# One of: blue, dark, green, orange, pink, red.
-# Enabling dark background will also modify primary font color
-# to be darker.
+# One of: blue, dark, green, orange, pink, red, light, auto
+# Enabling dark background will also modify primary font color to be darker.
 # Defaults to accent color (or, if not accent color specified, to blue).
-background_color = "blue"
+background_color = "auto"
 
 # The logo text - defaults to "Terminimal theme"
 logo_text = "Terminimal theme"
