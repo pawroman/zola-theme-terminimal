@@ -20,11 +20,13 @@ repo = "https://github.com/panr/hugo-theme-terminal"
 [extra]
 
 # One of: blue, green, orange, pink, red.
+# Defaults to blue.
+# Append -light for light themes, e.g. blue-light
+# Or append -auto, e.g. blue-auto
 accent_color = "blue"
 
-# One of: blue, dark, green, orange, pink, red.
-# Enabling dark background will also modify primary font color
-# to be darker.
+# One of: blue, dark, green, orange, pink, red, light, auto
+# Enabling dark background will also modify primary font color to be darker.
 # Defaults to accent color (or, if not accent color specified, to blue).
 background_color = "blue"
 
