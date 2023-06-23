@@ -118,13 +118,14 @@ of your `config.toml`:
 [extra]
 
 # One of: blue, green, orange, pink, red.
-# Defaults to blue. 
+# Defaults to blue.
+# Append -light for light themes, e.g. blue-light
+# Or append -auto, e.g. blue-auto
 accent_color = "green"
 
-# One of: blue, dark, green, orange, pink, red.
-# Enabling dark background will also modify primary font color
-# to be darker.
-# Defaults to accent color (or, if not accent color specified, to blue). 
+# One of: blue, dark, green, orange, pink, red, light, auto
+# Enabling dark background will also modify primary font color to be darker.
+# Defaults to accent color (or, if not accent color specified, to blue).
 background_color = "dark"
 ```
 
