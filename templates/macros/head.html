@@ -60,7 +60,7 @@
         {% if term %}
             {%- set permalink = term.permalink %}
             {%- set title = title_macros::title(page_title=term.name, main_title=config.title) %}
-            {%- set description = "All posts for " ~ term.name %}
+            {%- set description = "All posts tagged " ~ term.name %}
         {% else %}
             {%- set permalink = config.base_url ~ "/" ~ taxonomy.slug %}
             {%- set title = title_macros::title(page_title=taxonomy.name, main_title=config.title) %}
