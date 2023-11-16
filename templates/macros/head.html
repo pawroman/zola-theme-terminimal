@@ -37,7 +37,7 @@
     {%- set type = "article" %}
     {%- if page.extra and page.extra.og_image %}
         {%- if page.colocated_path %}
-            {%- set og_image = page.colocated_path ~ page.extra.og_image %}
+            {%- set og_image = page.path ~ page.extra.og_image %}
         {%- else %}
             {%- set og_image = page.extra.og_image %}
         {% endif %}
