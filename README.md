@@ -121,6 +121,20 @@ default_og_image = "static/ocean.jpg"
 
 ## Configuration
 
+### Only show the post's description
+
+On each post you can specify the following:
+
+```toml
+description = "test description"
+
+[extra]
+show_only_description = true
+```
+
+This will render `test description` under this
+particular post on the homepage instead of a summary.
+
 ### Colors
 
 Both the accent colors and background colors are

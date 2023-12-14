@@ -73,7 +73,8 @@
             {%- for page in show_pages %}
                 <div class="post on-list">
                     {{ post_macros::header(page=page) }}
-                    {{ post_macros::content(page=page, summary=true) }}
+
+                    {{ post_macros::content(page=page, summary=true, show_only_description=page.extra.show_only_description | default(value=false)) }}
                 </div>
             {% endfor -%}
             <div class="pagination">

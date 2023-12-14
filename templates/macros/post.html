@@ -1,5 +1,9 @@
-{% macro content(page, summary) %}
-    {%- if summary and page.summary %}
+{% macro content(page, summary, show_only_description) %}
+    {%- if show_only_description %}
+        <div class="post-content">
+            {{ page.description | safe }}
+        </div>
+    {% elif summary and page.summary %}
         <div class="post-content">
             {{ page.summary | safe }}
         </div>
