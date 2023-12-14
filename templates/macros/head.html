@@ -1,3 +1,5 @@
+{% import "macros/title.html" as title_macros -%}
+
 {% macro head(config) %}
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -24,3 +26,69 @@
 {% endif -%}
 
 {% endmacro head %}
+
+
+{# Extra Meta tags for OpenGraph and Twitter cards #}
+{% macro open_graph(config) %}
+{%- if page %}
+    {%- set permalink = page.permalink %}
+    {%- set title = title_macros::title(page_title=page.title, main_title=config.title) %}
+    {%- set description = page.description %}
+    {%- set type = "article" %}
+    {%- if page.extra and page.extra.og_image %}
+        {%- if page.colocated_path %}
+            {%- set og_image = page.path ~ page.extra.og_image %}
+        {%- else %}
+            {%- set og_image = page.extra.og_image %}
+        {% endif %}
+    {%- elif config.extra.default_og_image %}
+        {%- set og_image = config.extra.default_og_image %}
+    {%- endif %}
+{%- elif section %}
+    {%- set permalink = section.permalink %}
+    {%- set title = title_macros::title(page_title=section.title, main_title=config.title) %}
+    {%- set description = section.description | default(value=config.description) %}
+    {%- set type = "website" %}
+    {%- if section.extra and section.extra.og_image %}
+        {%- set og_image = section.extra.og_image %}
+    {%- elif config.extra.default_og_image %}
+        {%- set og_image = config.extra.default_og_image %}
+    {%- endif %}
+{%- else %}
+    {# For 404 and taxonomy pages #}
+    {%- if taxonomy %}
+        {% if term %}
+            {%- set permalink = term.permalink %}
+            {%- set title = title_macros::title(page_title=term.name, main_title=config.title) %}
+            {%- set description = "All posts tagged " ~ term.name %}
+        {% else %}
+            {%- set permalink = config.base_url ~ "/" ~ taxonomy.slug %}
+            {%- set title = title_macros::title(page_title=taxonomy.name, main_title=config.title) %}
+            {%- set description = "All " ~ taxonomy.name %}
+        {% endif %}
+    {%- else %}
+        {%- set permalink = config.base_url %}
+        {%- set title = title_macros::title(page_title="404", main_title=config.title) %}
+        {%- set description = "Page not found" %}
+    {%- endif %}
+    {%- set type = "website" %}
+    {%- if config.extra.default_og_image %}
+        {%- set og_image = config.extra.default_og_image %}
+    {%- endif %}
+{%- endif -%}{# #}
+    <meta name="description" content="{{ description | safe }}">
+
+    <meta property="og:description" content="{{ description | safe }}">
+    <meta property="og:title" content="{{ title | safe }}">
+    <meta property="og:type" content="{{ type }}">
+    <meta property="og:url" content="{{ permalink | safe }}">
+{% if og_image %}
+    <meta property="og:image" content="{{ get_url(path=og_image) }}">
+    <meta name="twitter:image" content="{{ get_url(path=og_image) }}">
+{% endif %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="{{ description | safe }}">
+    <meta name="twitter:title" content="{{ title | safe }}">
+    <meta property="twitter:domain" content="{{ config.base_url | replace(from="https://", to="") }}">
+    <meta property="twitter:url" content="{{ permalink | safe }}">
+{% endmacro open_graph %}

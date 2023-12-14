@@ -101,6 +101,24 @@ Example:
           caption_style="font-weight: bold; font-style: italic;") }}
 ```
 
+## OpenGraph
+
+To add an image to a post, set the `og_image` extra option to the desired image
+in the same directory of the markdown file:
+
+```toml
+[extra]
+og_image = "colocated_image.png"
+```
+
+Additionally, for the section pages and for posts to have a fallback image, add
+`default_og_image` to the `[extra]` section:
+
+```toml
+[extra]
+default_og_image = "static/ocean.jpg"
+```
+
 ## Configuration
 
 ### Colors
@@ -358,7 +376,7 @@ This theme has been forked from https://github.com/panr/hugo-theme-terminal
   - Prism.js syntax highlighting is not supported (you can use
     [Zola's](https://www.getzola.org/documentation/content/syntax-highlighting/)).
 
-- All references to social media (e.g. Twitter, OpenGraph) have been removed.
+- All references to social media (e.g. Twitter) have been removed.
 
 - All references to external URLs (e.g. Google CDN) have been removed.
   This theme's static assets are meant to be served from where it's hosted.

@@ -11,6 +11,8 @@
     <title>{%- block title %}{{ config.title }}{% endblock title -%}</title>
     {{ head_macros::head(config=config) }}
 
+    {%- block open_graph %}{{ head_macros::open_graph(config=config) }}{% endblock open_graph -%}
+
     {%- if config.generate_feed %}
         {%- if "rss" in config.feed_filename %}
             {% set feed_type = 'rss+xml' %}
