@@ -77,7 +77,7 @@ figure(src="http://rustacean.net/assets/rustacean-flat-gesture.png",
        style="width: 25%;",
        position="center",
        caption_position="left",
-       caption="Ferris, the (unofficial) Rust mascot",
+       caption="**Ferris**, the (unofficial) Rust mascot",
        caption_style="font-weight: bold; font-style: italic;")
 ```
 
@@ -85,8 +85,8 @@ figure(src="http://rustacean.net/assets/rustacean-flat-gesture.png",
           style="width: 25%;",
           position="center",
           caption_position="left",
-          caption="Ferris, the (unofficial) Rust mascot",
-          caption_style="font-weight: bold; font-style: italic;") }}
+          caption="**Ferris**, the (unofficial) Rust mascot",
+          caption_style="font-style: italic;") }}
 
 ---
 
