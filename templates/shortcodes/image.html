@@ -4,5 +4,5 @@
     {# ... then prepend the site's base URL to the image's URL. #}
     {% set src = config.base_url ~ src %}
   {% endif %}
-  <img src="{{ src | safe }}"{% if alt %} alt="{{ alt }}"{% endif %} class="{% if position %}{{ position }}{% else -%} center {%- endif %}" {%- if style %} style="{{ style | safe }}" {%- endif %} />
+  <img src="{{ src | safe }}"{% if alt %} alt="{{ alt }}"{% endif %} class="{% if position %}{{ position }}{% else -%} center {%- endif %}" {%- if style %} style="{{ style | safe }}" {%- endif %} decoding="async" loading="lazy"/>
 {% endif %}
