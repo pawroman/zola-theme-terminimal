@@ -1,8 +1,10 @@
 {% if src %}
   {# If the image's URL is internal to the site... #}
   {% if src is not starting_with("http") %}
-    {# ... then prepend the site's base URL to the image's URL. #}
-    {% set src = config.base_url ~ src %}
+    {# ... then convert the page's colocated_path attribute to a string so it can be concatenated... #}
+    {% set colocated_path = page.colocated_path | as_str %}
+    {# ... and use `resize_image` to get image's URL for colocated blog posts and non-colocated blog posts. #}
+    {% set image = resize_image(path=colocated_path ~ src, width=5000, height=5000, op="fit") %}
   {% endif %}
   <img src="{{ src | safe }}"{% if alt %} alt="{{ alt }}"{% endif %} class="{% if position %}{{ position }}{% else -%} center {%- endif %}" {%- if style %} style="{{ style | safe }}" {%- endif %} decoding="async" loading="lazy"/>
 {% endif %}
