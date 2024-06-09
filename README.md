@@ -348,6 +348,41 @@ page_titles = "combined"
 All the configuration options are also described in
 [`config.toml`](../master/config.toml).
 
+
+### RSS
+
+This theme supports RSS feeds.
+To enable RSS you need to set those 3 configuration settings to valid values: 
+
+```toml
+generate_feed = true
+author = "yourself@email.com"
+
+# Use `rss.xml` for RSS feeds and `atom.xml` for ATOM.
+feed_filename = "atom.xml"
+```
+
+Note that `author` is also required as part of the RSS spec.
+You can read more on https://www.getzola.org/documentation/templates/feeds/ about the potential values, since RFC 4287 requires author to be a name and not an email.
+
+To add an RSS icon to the main menu, you can add this entry to the `menu_items` :
+
+```toml
+menu_items = [
+    # RSS
+    {name = "", url = "$BASE_URL/$FEED_FILENAME"}
+]
+```
+
+You can also customize the color of the RSS icon by changing the `rss_icon_color`:
+
+```toml
+[extra]
+
+# ...
+rss_icon_color = "#ee802f"
+```
+
 ## Extending
 
 Each of the templates defines named blocks, so
