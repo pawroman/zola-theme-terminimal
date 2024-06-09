@@ -38,7 +38,6 @@
             <ul class="menu__inner">
             {%- for item in menu_items %}
                 <li {%- if current_item and current_item == item %} class="active" {%- endif %}>
-
                     {%- if item.newtab -%}
                         <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) | safe }}" target="_blank" rel="noopener noreferrer">{{ item.name | safe }}</a>
                     {%- else -%}
@@ -47,7 +46,6 @@
 
                     <!-- RSS -->
                     {%- set is_rss = item.url == "$BASE_URL/$FEED_FILENAME" -%}
-
                     {%- if is_rss and config.generate_feed %}
                         <a type="application/rss+xml" title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
                             <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
