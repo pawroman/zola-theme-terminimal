@@ -38,30 +38,42 @@
             <ul class="menu__inner">
             {%- for item in menu_items %}
                 <li {%- if current_item and current_item == item %} class="active" {%- endif %}>
-                    {%- if item.newtab -%}
-                        <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) | safe }}" target="_blank" rel="noopener noreferrer">{{ item.name | safe }}</a>
-                    {%- else -%}
-                        <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) | safe }}">{{ item.name | safe }}</a>
-                    {%- endif -%}
 
                     <!-- RSS -->
                     {%- set is_rss = item.url == "$BASE_URL/$FEED_FILENAME" -%}
-                    {%- if is_rss and config.generate_feed %}
 
-                        {%- if config.feed_filename == "rss.xml" %}
-                            {% set feed_type = 'rss+xml' %}
-                        {%- else %}
-                            {% set feed_type = 'atom+xml' %}
+                    {%- if config.extra.rss_icon_color %}
+                        {%- set rss_icon_color = config.extra.rss_icon_color %}
+                    {%- else %}
+                        {%- set rss_icon_color = "#ee802f" %}
+                    {%- endif %}
+
+                    {%- if is_rss -%}
+                        {%- if config.generate_feed %}
+                            {%- if config.feed_filename == "rss.xml" %}
+                                {% set feed_type = 'rss+xml' %}
+                            {%- else %}
+                                {% set feed_type = 'atom+xml' %}
+                            {% endif -%}
+
+                            <a type="application/{{feed_type}}" title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
+                                <svg id="rss-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32 32" fill="none" stroke="{{rss_icon_color}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss">
+                                <g transform="translate(0,5)">
+                                    <path d="M4 11a9 9 0 0 1 9 9"></path>
+                                    <path d="M4 4a16 16 0 0 1 16 16"></path>
+                                    <circle cx="5" cy="19" r="1"></circle>
+                                </g>
+                                </svg>
+                            </a>
                         {% endif -%}
 
-                        <a type="application/{{feed_type}}" title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
-                            <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                                <path fill="#ee802f" d="M128.1 416c0 35.4-28.7 64-64 64S0 451.3 0 416s28.7-64 64-64 64 28.7 64 64zm175.7 47.3c-8.4-154.6-132.2-278.6-287-287C7.7 175.8 0 183.1 0 192.3v48.1c0 8.4 6.5 15.5 14.9 16 111.8 7.3 201.5 96.7 208.8 208.8 .5 8.4 7.6 14.9 16 14.9h48.1c9.1 0 16.5-7.7 16-16.8zm144.2 .3C439.6 229.7 251.5 40.4 16.5 32 7.5 31.7 0 39 0 48v48.1c0 8.6 6.8 15.6 15.5 16 191.2 7.8 344.6 161.3 352.5 352.5 .4 8.6 7.4 15.5 16 15.5h48.1c9 0 16.3-7.5 16-16.5z"/>
-                            </svg>
-                        </a>
-                    </p>
-                    {% endif -%}
+                    {%- else -%}
+                        {%- if item.newtab -%}
+                            <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) | safe }}" target="_blank" rel="noopener noreferrer">{{ item.name | safe }}</a>
+                        {%- else -%}
+                            <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) | safe }}">{{ item.name | safe }}</a>
+                        {%- endif -%}
+                    {%- endif -%}
 
                 </li>
             {% endfor -%}
