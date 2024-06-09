@@ -48,7 +48,7 @@
                     <!-- RSS -->
                     {%- set is_rss = item.url == "$BASE_URL/$FEED_FILENAME" -%}
 
-                    {%- if is_rss %}
+                    {%- if is_rss and config.generate_feed %}
                         <a type="application/rss+xml" title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
                             <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                 <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
