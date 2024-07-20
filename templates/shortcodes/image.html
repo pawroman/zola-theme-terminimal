@@ -2,7 +2,7 @@
   {# If the image's URL is internal to the site... #}
   {% if src is not starting_with("http") %}
     {# ... then prepend the site's base URL to the image's URL. #}
-    {% set src = config.base_url ~ src %}
+    {% set src = get_url(path=page.colocated_path ~ src) %}
   {% endif %}
-  <img src="{{ src | safe }}"{% if alt %} alt="{{ alt }}"{% endif %} class="{% if position %}{{ position }}{% else -%} center {%- endif %}" {%- if style %} style="{{ style | safe }}" {%- endif %} decoding="async" loading="lazy"/>
+  <img src="{{ src | safe }}"{% if alt %} alt="{{ alt }}" title="{{ alt }}"{% endif %} class="{% if position %}{{ position }}{% else -%} center {%- endif %}" {%- if style %} style="{{ style | safe }}" {%- endif %} decoding="async" loading="lazy"/>
 {% endif %}
