@@ -34,6 +34,7 @@ For more information about this fork and the differences to the original theme, 
 - [Features](#features)
   - [OpenGraph](#opengraph)
   - [Comments](#comments)
+  - [Mastodon](#mastodon)
 - [Configuration](#configuration)
   - [Only show the post's description](#only-show-the-posts-description)
   - [Colors](#colors)
@@ -172,6 +173,17 @@ See the [utterances] documentation regarding these options:
 - [`post_map`](https://utteranc.es/#heading-issue-label)
 - [`label`](https://utteranc.es/#heading-mapping)
 - [`theme`](https://utteranc.es/#heading-theme)
+
+### Mastodon
+
+To add Mastodon support, add the following to your `config.toml`:
+
+```toml
+[extra]
+mastodon_url = "https://hachyderm.io/@opeik"
+```
+
+This will add headers required for [verification](https://docs.joinmastodon.org/user/profile/#verification).
 
 ## Configuration
 

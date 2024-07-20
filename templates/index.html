@@ -26,6 +26,10 @@
         <link rel="shortcut icon" type="{{ config.extra.favicon_mimetype | default(value="image/x-icon") | safe }}" href="{{ config.extra.favicon | safe }}">
     {% endif -%}
 
+    {%- if config.extra.mastodon_url %}
+        {%- block mastodon %}{{ head_macros::mastodon(config=config) }}{% endblock mastodon -%}
+    {% endif -%}
+
     {%- block extra_head %}
     {% endblock extra_head -%}
 </head>
