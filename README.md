@@ -1,3 +1,4 @@
+<!-- omit from toc -->
 # Terminimal
 
 [![Build Status](https://github.com/pawroman/zola-theme-terminimal/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/pawroman/zola-theme-terminimal/actions/workflows/pages/pages-build-deployment)
@@ -10,6 +11,7 @@ https://pawroman.github.io/zola-theme-terminimal/
 
 Tested with Zola v0.17.2. Please note that earlier versions might not work because of breaking changes across Zola versions.
 
+<!-- omit from toc -->
 #### Fork disclaimer
 
 This theme is a fork (not a port) of "Terminal" Hugo theme
@@ -20,6 +22,37 @@ Many thanks for that outstanding original theme, Radek!
 
 For more information about this fork and the differences to the original theme, please see:
 [Changes compared to the original theme](#changes-compared-to-the-original-theme) below.
+
+<!-- omit from toc -->
+## Table of contents
+
+- [Versioning](#versioning)
+- [How to start](#how-to-start)
+- [Shortcodes](#shortcodes)
+  - [`image`](#image)
+  - [`figure`](#figure)
+- [Features](#features)
+  - [OpenGraph](#opengraph)
+  - [Comments](#comments)
+- [Configuration](#configuration)
+  - [Only show the post's description](#only-show-the-posts-description)
+  - [Colors](#colors)
+  - [Logo text and link](#logo-text-and-link)
+  - [Author and copyright](#author-and-copyright)
+  - [Menu](#menu)
+  - [Tags](#tags)
+  - [Pagination](#pagination)
+  - [Language code](#language-code)
+  - [Hack font subset](#hack-font-subset)
+  - [Favicon](#favicon)
+  - [Page titles](#page-titles)
+- [Extending](#extending)
+- [How to contribute](#how-to-contribute)
+- [Changes compared to the original theme](#changes-compared-to-the-original-theme)
+  - [New features](#new-features)
+  - [Features retained from the original](#features-retained-from-the-original)
+- [License](#license)
+
 
 ## Versioning
 
@@ -81,7 +114,7 @@ Example:
 {{ image(src="/img/hello.png", alt="Hello Friend",
          position="left", style="border-radius: 8px;") }}
 ```
-  
+
 ### `figure`
 
 Same as `image`, but with a few extra optional arguments:
@@ -101,7 +134,9 @@ Example:
           caption_style="font-style: italic;") }}
 ```
 
-## OpenGraph
+## Features
+
+### OpenGraph
 
 To add an image to a post, set the `og_image` extra option to the desired image
 in the same directory of the markdown file:
@@ -118,6 +153,25 @@ Additionally, for the section pages and for posts to have a fallback image, add
 [extra]
 default_og_image = "static/ocean.jpg"
 ```
+
+### Comments
+
+[utterances] leverages Github issues to provide lightweight and maintenance free
+support for comments. To enable utterances, add the following to your `config.toml`:
+
+```toml
+[extra.utterances]
+enabled = true
+repo = "{github_username}/{github_repo}"
+post_map = "pathname"
+label = "utterances"
+theme = "github-dark-orange"
+```
+
+See the [utterances] documentation regarding these options:
+- [`post_map`](https://utteranc.es/#heading-issue-label)
+- [`label`](https://utteranc.es/#heading-mapping)
+- [`theme`](https://utteranc.es/#heading-theme)
 
 ## Configuration
 
@@ -187,7 +241,7 @@ You can set the footer's copyright author name like this:
 # copyright text. Apart from author, it will
 # contain current year and a link to the theme.
 author = "My Name"
-``` 
+```
 
 If you don't like the default copyright text,
 you can set it to completely custom HTML:
@@ -216,13 +270,13 @@ menu_items = [
     # each of these is optional, name and url are required
     # $BASE_URL is going to be substituted by base_url from configuration
     {name = "blog", url = "$BASE_URL"},
-    
+
     # tags should only be enabled if you have "tags" taxonomy
     # see documentation below for more details
     {name = "tags", url = "$BASE_URL/tags"},
     {name = "archive", url = "$BASE_URL/archive"},
     {name = "about me", url = "$BASE_URL/about"},
-    
+
     # set newtab to true to make the link open in new tab
     {name = "github", url = "url-to-your-github", newtab = true},
 ]
@@ -239,7 +293,7 @@ taxonomies = [
 ]
 ```
 
-Enabling tags will create a new `/tags` page, and 
+Enabling tags will create a new `/tags` page, and
 cause them to show up in `archive` section. Note
 that you still need to create a menu link to the tags
 page manually.
@@ -426,3 +480,5 @@ for more information.
 
 The license for Hack fonts used is included in
 [LICENSE-Hack.md](../master/LICENSE-Hack.md).
+
+[utterances]: https://utteranc.es/
