@@ -13,8 +13,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: Hack, DejaVu Sans Mono, Monaco, Consolas, Ubuntu Mono, monospace;
-  font-size: 1rem;
+  font-family: Exo2, Hack, DejaVu Sans Mono, Monaco, Consolas, Ubuntu Mono, monospace;
+  font-size: 1.25rem;
   line-height: 1.54;
   background-color: var(--background);
   color: var(--color);
@@ -123,11 +123,11 @@ code {
   background: var(--accent-alpha-20);
   padding: 1px 6px;
   margin: 0 2px;
-  font-size: .95rem;
+  font-size: 1rem;
 }
 
 pre {
-  font-family: Hack, DejaVu Sans Mono, Monaco, Consolas, Ubuntu Mono, monospace;
+  font-family: Exo2, Hack, DejaVu Sans Mono, Monaco, Consolas, Ubuntu Mono, monospace;
   padding: 20px;
   font-size: .95rem;
   overflow: auto;

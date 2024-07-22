@@ -19,7 +19,10 @@
     {% endif -%}
 {% endif -%}
 
-{%- if config.extra.use_full_hack_font %}
+{%- if config.extra.use_full_hack_font == "exo2" %}
+    <link rel="stylesheet" href="{{ get_url(path="font-exo2.css", trailing_slash=false) | safe }}">
+    <link rel="stylesheet" href="{{ get_url(path="font-hack.css", trailing_slash=false) | safe }}">
+{%- elif config.extra.use_full_hack_font %}
     <link rel="stylesheet" href="{{ get_url(path="font-hack.css", trailing_slash=false) | safe }}">
 {% else %}
     <link rel="stylesheet" href="{{ get_url(path="font-hack-subset.css", trailing_slash=false) | safe }}">
