@@ -13,7 +13,7 @@
 
     {%- block open_graph %}{{ head_macros::open_graph(config=config) }}{% endblock open_graph -%}
 
-    {%- if config.generate_feed %}
+    {%- if config.generate_feeds %}
         {%- if "rss" in config.feed_filename %}
             {% set feed_type = 'rss+xml' %}
         {%- else %}
