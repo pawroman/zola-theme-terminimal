@@ -13,13 +13,17 @@
 
     {%- block open_graph %}{{ head_macros::open_graph(config=config) }}{% endblock open_graph -%}
 
-    {%- if config.generate_feed %}
-        {%- if "rss" in config.feed_filename %}
-            {% set feed_type = 'rss+xml' %}
-        {%- else %}
-            {% set feed_type = 'atom+xml' %}
-        {% endif -%}
-        <link rel="alternate" type="application/{{ feed_type }}" title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
+    {%- if config.generate_feeds %}
+        {%- for feed in config.feed_filenames %}
+            {%- if feed is containing('atom') %}
+                <link rel="alternate" type="application/atom+xml" title="{{ config.title }} Atom Feed" href="{{ get_url(path=feed, trailing_slash=false, lang=lang) | safe }}" />
+            {%- endif %}
+
+            {%- if feed is containing('rss') %}
+                <link rel="alternate" type="application/rss+xml" title="{{ config.title }} RSS Feed" href="{{ get_url(path=feed, trailing_slash=false, lang=lang) | safe }}" />
+            {%- endif %}
+
+        {%- endfor %}
     {% endif -%}
 
     {%- if config.extra.favicon %}
