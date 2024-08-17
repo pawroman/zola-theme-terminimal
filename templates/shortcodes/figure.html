@@ -1,8 +1,15 @@
 {% if src %}
-  <figure class="{% if position %}{{ position }}{% else -%} center {%- endif %}" >
-    <img src="{{ src | safe }}"{% if alt %} alt="{{ alt }}"{% endif %}{% if style %} style="{{ style }}"{% endif %} decoding="async" loading="lazy"/>
-    {% if caption %}
-      <figcaption class="{% if caption_position %}{{ caption_position }}{% else -%} center {%- endif %}"{% if caption_style %} style="{{ caption_style | safe }}"{% endif %}>{{ caption | markdown() | safe }}</figcaption>
-    {% endif %}
-  </figure>
+  {# If the image's URL is internal to the site... #}
+  {% if src is not starting_with("http") %}
+    {# ... then prepend the site's base URL to the image's URL. #}
+    {% set src = get_url(path=page.colocated_path ~ src) %}
+  {% endif %}
+<figure class="{% if position %}{{ position }}{% else -%} center {%- endif %}">
+  <img src="{{ src | safe }}" {% if alt %} alt="{{ alt }}" title="{{ alt }}" {% endif %}{% if style
+    %} style="{{ style }}" {% endif %} decoding="async" loading="lazy" />
+  {% if caption %}
+  <figcaption class="{% if caption_position %}{{ caption_position }}{% else -%} center {%- endif %}" {% if caption_style
+    %} style="{{ caption_style | safe }}" {% endif %}>{{ caption | markdown() | safe }}</figcaption>
+  {% endif %}
+</figure>
 {% endif %}
