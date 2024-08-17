@@ -6,10 +6,10 @@ title = "Zola Terminimal theme"
 compile_sass = true
 
 # The theme supports feeds (RSS and ATOM)
-generate_feed = true
+generate_feeds = true
 
 # Use `rss.xml` for RSS feeds and `atom.xml` for ATOM.
-feed_filename = "atom.xml"
+feed_filenames = ["rss.xml", "atom.xml"]
 
 # Optional: enable tags
 taxonomies = [

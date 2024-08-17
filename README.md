@@ -8,7 +8,9 @@
 See the live demo (of the default configuration) here:
 https://pawroman.github.io/zola-theme-terminimal/
 
-Tested with Zola v0.17.2. Please note that earlier versions might not work because of breaking changes across Zola versions.
+Tested with Zola v0.19.2.
+
+Please note that earlier (and older) versions might not work because of breaking changes across Zola versions.
 
 #### Fork disclaimer
 
