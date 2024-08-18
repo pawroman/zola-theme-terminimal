@@ -355,11 +355,11 @@ This theme supports RSS feeds.
 To enable RSS you need to set those 3 configuration settings to valid values: 
 
 ```toml
-generate_feed = true
+generate_feeds = true
 author = "yourself@email.com"
 
 # Use `rss.xml` for RSS feeds and `atom.xml` for ATOM.
-feed_filename = "atom.xml"
+feed_filenames = ["rss.xml", "atom.xml"]
 ```
 
 Note that `author` is also required as part of the RSS spec.

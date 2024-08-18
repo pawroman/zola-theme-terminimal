@@ -49,14 +49,16 @@
                     {%- endif %}
 
                     {%- if is_rss -%}
-                        {%- if config.generate_feed %}
-                            {%- if config.feed_filename == "rss.xml" %}
-                                {% set feed_type = 'rss+xml' %}
-                            {%- else %}
-                                {% set feed_type = 'atom+xml' %}
-                            {% endif -%}
+                        {%- if config.generate_feeds %}
+                            {%- for feed in config.feed_filenames %}
+                                {%- if feed is containing('rss') %}
+                                    <a rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ get_url(path=feed, trailing_slash=false, lang=lang) | safe }}" />
+                                {% endif -%}
+                                {%- if feed is containing('atom') %}
+                                    <a rel="alternate" type="application/atom+xml" title="ATOM Feed" href="{{ get_url(path=feed, trailing_slash=false, lang=lang) | safe }}" />
+                                {% endif -%}
+                            {% endfor -%}
 
-                            <a type="application/{{feed_type}}" title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
                                 <svg id="rss-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32 32" fill="none" stroke="{{rss_icon_color}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss">
                                 <g transform="translate(0,5)">
                                     <path d="M4 11a9 9 0 0 1 9 9"></path>
