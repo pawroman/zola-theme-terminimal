@@ -38,11 +38,45 @@
             <ul class="menu__inner">
             {%- for item in menu_items %}
                 <li {%- if current_item and current_item == item %} class="active" {%- endif %}>
-                    {%- if item.newtab -%}
-                        <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) | safe }}" target="_blank" rel="noopener noreferrer">{{ item.name | safe }}</a>
+
+                    <!-- RSS -->
+                    {%- set is_rss = item.url == "$BASE_URL/$FEED_FILENAME" -%}
+
+                    {%- if config.extra.rss_icon_color %}
+                        {%- set rss_icon_color = config.extra.rss_icon_color %}
+                    {%- else %}
+                        {%- set rss_icon_color = "#ee802f" %}
+                    {%- endif %}
+
+                    {%- if is_rss -%}
+                        {%- if config.generate_feeds %}
+                            {%- for feed in config.feed_filenames %}
+                                {%- if feed is containing('rss') %}
+                                    <a rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ get_url(path=feed, trailing_slash=false, lang=lang) | safe }}" />
+                                {% endif -%}
+                                {%- if feed is containing('atom') %}
+                                    <a rel="alternate" type="application/atom+xml" title="ATOM Feed" href="{{ get_url(path=feed, trailing_slash=false, lang=lang) | safe }}" />
+                                {% endif -%}
+                            {% endfor -%}
+
+                                <svg id="rss-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32 32" fill="none" stroke="{{rss_icon_color}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss">
+                                <g transform="translate(0,5)">
+                                    <path d="M4 11a9 9 0 0 1 9 9"></path>
+                                    <path d="M4 4a16 16 0 0 1 16 16"></path>
+                                    <circle cx="5" cy="19" r="1"></circle>
+                                </g>
+                                </svg>
+                            </a>
+                        {% endif -%}
+
                     {%- else -%}
-                        <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) | safe }}">{{ item.name | safe }}</a>
+                        {%- if item.newtab -%}
+                            <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) | safe }}" target="_blank" rel="noopener noreferrer">{{ item.name | safe }}</a>
+                        {%- else -%}
+                            <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) | safe }}">{{ item.name | safe }}</a>
+                        {%- endif -%}
                     {%- endif -%}
+
                 </li>
             {% endfor -%}
             </ul>

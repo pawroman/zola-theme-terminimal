@@ -34,6 +34,9 @@ accent_color = "blue"
 # Defaults to accent color (or, if not accent color specified, to blue).
 background_color = "blue"
 
+# You can set this to any rgb hex value.
+rss_icon_color = "#ee802f"
+
 # The logo text - defaults to "Terminimal theme"
 logo_text = "Terminimal theme"
 
