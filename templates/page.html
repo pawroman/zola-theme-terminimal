@@ -8,6 +8,7 @@
     <div class="post">
         {{ post_macros::header(page=page) }}
         {{ post_macros::content(page=page, summary=false, show_only_description=false) }}
+        {{ post_macros::comments(page=page) }}
         {{ post_macros::earlier_later(page=page) }}
     </div>
 {% endblock content %}

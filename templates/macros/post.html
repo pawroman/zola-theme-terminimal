@@ -108,3 +108,18 @@
         </span>
     {% endif -%}
 {% endmacro tags %}
+
+{% macro comments(page) %}
+    {%- if config.extra.utterances.enabled and page.relative_path is not starting_with("pages/") %}
+        <div class="comments">
+            <div class="comments__title">
+                <span class="comments__title-h">comments</span>
+                <hr />
+            </div>
+
+            <script src="https://utteranc.es/client.js" repo="{{ config.extra.utterances.repo }}"
+                issue-term="{{ config.extra.utterances.post_map }}" label="{{ config.extra.utterances.label }}"
+                theme="{{ config.extra.utterances.theme }}" crossorigin="anonymous" async></script>
+        </div>
+    {% endif -%}
+{% endmacro comments %}
