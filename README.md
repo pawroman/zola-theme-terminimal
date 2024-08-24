@@ -83,7 +83,7 @@ Example:
 {{ image(src="/img/hello.png", alt="Hello Friend",
          position="left", style="border-radius: 8px;") }}
 ```
-  
+
 ### `figure`
 
 Same as `image`, but with a few extra optional arguments:
@@ -103,7 +103,9 @@ Example:
           caption_style="font-style: italic;") }}
 ```
 
-## OpenGraph
+## Features
+
+### OpenGraph
 
 To add an image to a post, set the `og_image` extra option to the desired image
 in the same directory of the markdown file:
@@ -119,6 +121,16 @@ Additionally, for the section pages and for posts to have a fallback image, add
 ```toml
 [extra]
 default_og_image = "static/ocean.jpg"
+```
+
+### Mastodon
+
+To enable [Mastodon verification](https://docs.joinmastodon.org/user/profile/#verification), add
+the following to your `config.toml`:
+
+```toml
+[extra]
+mastodon_url = "https://hachyderm.io/@my_username_here"
 ```
 
 ## Configuration
@@ -189,7 +201,7 @@ You can set the footer's copyright author name like this:
 # copyright text. Apart from author, it will
 # contain current year and a link to the theme.
 author = "My Name"
-``` 
+```
 
 If you don't like the default copyright text,
 you can set it to completely custom HTML:
@@ -218,13 +230,13 @@ menu_items = [
     # each of these is optional, name and url are required
     # $BASE_URL is going to be substituted by base_url from configuration
     {name = "blog", url = "$BASE_URL"},
-    
+
     # tags should only be enabled if you have "tags" taxonomy
     # see documentation below for more details
     {name = "tags", url = "$BASE_URL/tags"},
     {name = "archive", url = "$BASE_URL/archive"},
     {name = "about me", url = "$BASE_URL/about"},
-    
+
     # set newtab to true to make the link open in new tab
     {name = "github", url = "url-to-your-github", newtab = true},
 ]
@@ -241,7 +253,7 @@ taxonomies = [
 ]
 ```
 
-Enabling tags will create a new `/tags` page, and 
+Enabling tags will create a new `/tags` page, and
 cause them to show up in `archive` section. Note
 that you still need to create a menu link to the tags
 page manually.

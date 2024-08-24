@@ -92,3 +92,7 @@
     <meta property="twitter:domain" content="{{ config.base_url | replace(from="https://", to="") }}">
     <meta property="twitter:url" content="{{ permalink | safe }}">
 {% endmacro open_graph %}
+
+{% macro mastodon(config) %}
+    <link rel="me" href="{{ config.extra.mastodon_url }}" />
+{% endmacro mastodon %}
