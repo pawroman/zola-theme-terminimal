@@ -1,4 +1,3 @@
-<!-- omit from toc -->
 # Terminimal
 
 [![Build Status](https://github.com/pawroman/zola-theme-terminimal/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/pawroman/zola-theme-terminimal/actions/workflows/pages/pages-build-deployment)
@@ -11,7 +10,6 @@ https://pawroman.github.io/zola-theme-terminimal/
 
 Tested with Zola v0.17.2. Please note that earlier versions might not work because of breaking changes across Zola versions.
 
-<!-- omit from toc -->
 #### Fork disclaimer
 
 This theme is a fork (not a port) of "Terminal" Hugo theme
@@ -22,37 +20,6 @@ Many thanks for that outstanding original theme, Radek!
 
 For more information about this fork and the differences to the original theme, please see:
 [Changes compared to the original theme](#changes-compared-to-the-original-theme) below.
-
-<!-- omit from toc -->
-## Table of contents
-
-- [Versioning](#versioning)
-- [How to start](#how-to-start)
-- [Shortcodes](#shortcodes)
-  - [`image`](#image)
-  - [`figure`](#figure)
-- [Features](#features)
-  - [OpenGraph](#opengraph)
-  - [Comments](#comments)
-- [Configuration](#configuration)
-  - [Only show the post's description](#only-show-the-posts-description)
-  - [Colors](#colors)
-  - [Logo text and link](#logo-text-and-link)
-  - [Author and copyright](#author-and-copyright)
-  - [Menu](#menu)
-  - [Tags](#tags)
-  - [Pagination](#pagination)
-  - [Language code](#language-code)
-  - [Hack font subset](#hack-font-subset)
-  - [Favicon](#favicon)
-  - [Page titles](#page-titles)
-- [Extending](#extending)
-- [How to contribute](#how-to-contribute)
-- [Changes compared to the original theme](#changes-compared-to-the-original-theme)
-  - [New features](#new-features)
-  - [Features retained from the original](#features-retained-from-the-original)
-- [License](#license)
-
 
 ## Versioning
 
