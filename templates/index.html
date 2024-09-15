@@ -60,6 +60,8 @@
             </div>
             {%- if page %}
               {{ language_menu_macros::menu(page=page) }}
+            {%- elif section %}
+              {{ language_menu_macros::menu(page=section) }}
             {% endif -%}
         </div>
 
@@ -133,6 +135,7 @@
     {% endblock footer %}
 
 </div>
+<script type="text/javascript" src="/js/menu.js"></script>
 {%- block extra_body %}
 {% endblock extra_body -%}
 </body>
