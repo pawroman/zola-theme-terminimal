@@ -1,0 +1,12 @@
+{% macro menu(page) %}
+<ul class="menu menu--desktop menu--language-selector">
+  <li class="menu__trigger">{{ trans(key="Language", lang=page.lang) }}&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      {%- for item in page.translations %}
+        <li><a href="{{ item.permalink }}">{{ trans(key=item.lang, lang=page.lang) }}</a></li>
+      {% endfor -%}
+    </ul>
+  </li>
+</ul>
+{% endmacro menu %}

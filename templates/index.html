@@ -1,6 +1,7 @@
 {% import "macros/date.html" as date_macros -%}
 {% import "macros/head.html" as head_macros -%}
 {% import "macros/menu.html" as menu_macros -%}
+{% import "macros/language_menu.html" as language_menu_macros -%}
 {% import "macros/post.html" as post_macros -%}
 {% import "macros/title.html" as title_macros -%}
 
@@ -57,6 +58,11 @@
                     </div>
                 </a>
             </div>
+            {%- if page %}
+              {{ language_menu_macros::menu(page=page) }}
+            {%- elif section %}
+              {{ language_menu_macros::menu(page=section) }}
+            {% endif -%}
         </div>
 
         {% block header_menu %}
@@ -129,6 +135,7 @@
     {% endblock footer %}
 
 </div>
+<script type="text/javascript" src="/js/menu.js"></script>
 {%- block extra_body %}
 {% endblock extra_body -%}
 </body>
