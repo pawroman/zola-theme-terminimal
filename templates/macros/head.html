@@ -78,8 +78,9 @@
 {%- endif -%}{# #}
     <meta name="description" content="{{ description | safe }}">
 
-    <meta property="og:description" content="{{ description | safe }}">
+    <meta property="og:site_name" content="{{ config.title }}">
     <meta property="og:title" content="{{ title | safe }}">
+    <meta property="og:description" content="{{ description | safe }}">
     <meta property="og:type" content="{{ type }}">
     <meta property="og:url" content="{{ permalink | safe }}">
 {% if og_image %}
