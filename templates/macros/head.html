@@ -32,7 +32,7 @@
 {% macro open_graph(config) %}
 {%- if page %}
     {%- set permalink = page.permalink %}
-    {%- set title = title_macros::title(page_title=page.title, main_title=config.title) %}
+    {%- set title = page.title %}
     {%- set description = page.description %}
     {%- set type = "article" %}
     {%- if page.extra and page.extra.og_image %}
