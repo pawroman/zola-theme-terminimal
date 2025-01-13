@@ -34,6 +34,9 @@ accent_color = "blue"
 # Defaults to accent color (or, if not accent color specified, to blue).
 background_color = "blue"
 
+# Format of the post date - defaults to "2025-01-13".
+post_date_format = "%Y-%m-%d"
+
 # The logo text - defaults to "Terminimal theme"
 logo_text = "Terminimal theme"
 

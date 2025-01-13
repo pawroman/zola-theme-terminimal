@@ -348,6 +348,16 @@ page_titles = "combined"
 All the configuration options are also described in
 [`config.toml`](../master/config.toml).
 
+### Post date format
+
+You can customize the format of the post date by adding:
+
+```toml
+[extra]
+# Overwrite the format to Jan 13, 2025.
+post_date_format = "%b %d, %Y"
+```
+
 ## Extending
 
 Each of the templates defines named blocks, so
