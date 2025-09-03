@@ -144,6 +144,34 @@ pre {
     margin: 0;
     background: none;
   }
+
+  &[data-linenos] {
+    padding: 1rem 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    margin: 0;
+
+    td {
+      padding: 0;
+      border: none;
+
+      &:nth-of-type(1) {
+        text-align: center;
+        user-select: none;
+        width: 3.5rem;
+        color: var(--accent-alpha-20);
+      }
+    }
+  }
+
+  mark {
+    display: block;
+    background-color: rgba(254, 252, 232, 0.9);
+  }
 }
 
 blockquote {
