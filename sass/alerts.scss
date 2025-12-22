@@ -1,0 +1,53 @@
+@import "variables";
+
+blockquote[class^=markdown-alert-] {
+  border: 1px solid var(--accent);
+  padding-top: initial;
+
+  &::before {
+    background-color: var(--accent);
+    position: relative;
+    display: block;
+    left: initial;
+    top: initial;
+    margin-left: -25px;
+    margin-right: -25px;
+    padding-left: 12px;
+
+    @media (max-width: $phone-max-width) {
+      margin-right: 0;
+    }
+
+    color: black;
+    font-family: "Hack";
+    font-size: inherit;
+  }
+
+  &>p::before {
+    content: "";
+  }
+
+  &>p {
+    padding-top: 25px;
+  }
+}
+
+blockquote.markdown-alert-note::before {
+  content: "  NOTE";
+}
+
+blockquote.markdown-alert-tip::before {
+  content: "  TIP";
+}
+
+blockquote.markdown-alert-important::before {
+  content: "  IMPORTANT";
+}
+
+blockquote.markdown-alert-warning::before {
+  content: "  WARNING";
+}
+
+blockquote.markdown-alert-caution::before {
+  content: "  CAUTION";
+}
