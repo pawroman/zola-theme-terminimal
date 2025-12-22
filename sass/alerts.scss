@@ -1,3 +1,5 @@
+@import "variables";
+
 blockquote[class^=markdown-alert-] {
   border: 1px solid var(--accent);
   padding-top: initial;
@@ -11,6 +13,10 @@ blockquote[class^=markdown-alert-] {
     margin-left: -25px;
     margin-right: -25px;
     padding-left: 12px;
+
+    @media (max-width: $phone-max-width) {
+      margin-right: 0;
+    }
 
     color: black;
     font-family: "Hack";
