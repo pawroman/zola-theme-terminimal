@@ -1,0 +1,14 @@
+:root {
+  --accent: rgb(121, 212, 151);
+  --accent-alpha-70: rgba(121, 212, 151, .7);
+  --accent-alpha-20: rgba(121, 212, 151, .2);
+
+  --background: #222129;
+  --color: white;
+  --border-color: rgba(255, 255, 255, .1);
+}
+
+::selection {
+    background-color: rgba(191, 157, 237, .6);
+    color: #ffffff;
+}
