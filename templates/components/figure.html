@@ -1,0 +1,13 @@
+{# Component output is inserted before markdown rendering, so none of the
+   emitted lines may be indented -- 4+ spaces would turn them into a code
+   block instead of an HTML block. #}
+{% component terminimal.figure(src, alt = "", position = "", style = "", caption = "", caption_position = "", caption_style = "") %}
+{%- if src %}
+<figure class="{% if position %}{{ position }}{% else -%} center {%- endif %}" >
+<img src="{{ src | safe }}"{% if alt %} alt="{{ alt }}"{% endif %}{% if style %} style="{{ style }}"{% endif %} decoding="async" loading="lazy"/>
+{%- if caption %}
+<figcaption class="{% if caption_position %}{{ caption_position }}{% else -%} center {%- endif %}"{% if caption_style %} style="{{ caption_style | safe }}"{% endif %}>{{ caption | markdown() | safe }}</figcaption>
+{%- endif %}
+</figure>
+{%- endif %}
+{% endcomponent terminimal.figure %}

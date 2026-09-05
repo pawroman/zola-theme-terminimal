@@ -59,17 +59,20 @@ compile_sass = true
 Also see the Zola documentation on using themes:
 https://www.getzola.org/documentation/themes/installing-and-using-themes/
 
-## Shortcodes
+## Components
 
-The theme adds two custom shortcodes related to image handling.
+The theme adds two components related to image handling. (These were
+shortcodes before Zola 0.23 removed shortcodes in favour of components.)
 
-### `image`
+### `terminimal.image`
 
 Used to show images.
 
 Required arguments:
 
 - **`src`**
+- **`base_url`** (components cannot read `config`, so pass `{config.base_url}`;
+  it is prepended to `src` when `src` is site-relative)
 
 Optional arguments:
 
@@ -80,13 +83,14 @@ Optional arguments:
 Example:
 
 ```
-{{ image(src="/img/hello.png", alt="Hello Friend",
-         position="left", style="border-radius: 8px;") }}
+{{ <terminimal.image src="/img/hello.png" alt="Hello Friend"
+         position="left" style="border-radius: 8px;" base_url={config.base_url} /> }}
 ```
   
-### `figure`
+### `terminimal.figure`
 
-Same as `image`, but with a few extra optional arguments:
+Same as `terminimal.image` (minus `base_url`), but with a few extra optional
+arguments:
 
 - **`caption`** (supports markdown)
 - **`caption_position`** (center \[default\] | left | right)
@@ -95,12 +99,12 @@ Same as `image`, but with a few extra optional arguments:
 Example:
 
 ```
-{{ figure(src="http://rustacean.net/assets/rustacean-flat-gesture.png",
-          style="width: 25%;",
-          position="right",
-          caption_position="left",
-          caption="**Ferris**, the (unofficial) Rust mascot",
-          caption_style="font-style: italic;") }}
+{{ <terminimal.figure src="http://rustacean.net/assets/rustacean-flat-gesture.png"
+          style="width: 25%;"
+          position="right"
+          caption_position="left"
+          caption="**Ferris**, the (unofficial) Rust mascot"
+          caption_style="font-style: italic;" /> }}
 ```
 
 ## OpenGraph
@@ -413,7 +417,7 @@ This theme has been forked from https://github.com/panr/hugo-theme-terminal
 
 - 5 color themes, depending on your preference:
   blue (default), green, orange, pink, red.
-- The shortcodes `image` and `figure` (See [Shortcodes](#shortcodes)).
+- The components `terminimal.image` and `terminimal.figure` (See [Components](#components)).
 - Fully responsive.
 
 ## License

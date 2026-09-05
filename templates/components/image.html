@@ -1,0 +1,10 @@
+{# Component output is inserted before markdown rendering, so none of the
+   emitted lines may be indented -- 4+ spaces would turn them into a code
+   block instead of an HTML block. #}
+{% component terminimal.image(src, base_url, alt = "", position = "", style = "") %}
+{%- if src %}
+{#- If the image's URL is internal to the site, prepend the site's base URL. -#}
+{% if src is not starting_with(pat="http") %}{% set_global src = base_url ~ src %}{% endif %}
+<img src="{{ src | safe }}"{% if alt %} alt="{{ alt }}"{% endif %} class="{% if position %}{{ position }}{% else -%} center {%- endif %}" {%- if style %} style="{{ style | safe }}" {%- endif %} decoding="async" loading="lazy"/>
+{%- endif %}
+{% endcomponent terminimal.image %}

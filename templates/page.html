@@ -1,13 +1,13 @@
 {% extends "index.html" %}
 
 {%- block title -%}
-{{ title_macros::title(page_title=page.title, main_title=config.title) }}
+{{ <terminimal.title page_title={page.title} main_title={config.title} config={config} /> }}
 {%- endblock -%}
 
 {% block content %}
     <div class="post">
-        {{ post_macros::header(page=page) }}
-        {{ post_macros::content(page=page, summary=false, show_only_description=false) }}
-        {{ post_macros::earlier_later(page=page) }}
+        {{ <terminimal.post_header page={page} /> }}
+        {{ <terminimal.post_content page={page} summary={false} show_only_description={false} /> }}
+        {{ <terminimal.earlier_later page={page} config={config} /> }}
     </div>
 {% endblock content %}

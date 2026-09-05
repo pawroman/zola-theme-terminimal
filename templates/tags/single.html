@@ -2,7 +2,7 @@
 
 {%- block title -%}
 {% set title = "Tag: " ~ term.name %}
-{{ title_macros::title(page_title=title, main_title=config.title) }}
+{{ <terminimal.title page_title={title} main_title={config.title} config={config} /> }}
 {%- endblock -%}
 
 {% block content %}
@@ -16,6 +16,6 @@
             Show all tags
         </a>
 
-        {{ post_macros::list_posts(pages=term.pages) }}
+        {{ <terminimal.list_posts pages={term.pages} /> }}
     </div>
 {% endblock content %}

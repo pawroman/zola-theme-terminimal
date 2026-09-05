@@ -1,25 +1,19 @@
-{% import "macros/date.html" as date_macros -%}
-{% import "macros/head.html" as head_macros -%}
-{% import "macros/menu.html" as menu_macros -%}
-{% import "macros/post.html" as post_macros -%}
-{% import "macros/title.html" as title_macros -%}
-
 <!DOCTYPE html>
 <html lang="{%- if config.default_language -%}{{ config.default_language }}{%- else -%}en{%- endif -%}">
 
 <head>
     <title>{%- block title %}{{ config.title }}{% endblock title -%}</title>
-    {{ head_macros::head(config=config) }}
+    {{ <terminimal.head config={config} /> }}
 
-    {%- block open_graph %}{{ head_macros::open_graph(config=config) }}{% endblock open_graph -%}
+    {%- block open_graph %}{{ <terminimal.open_graph config={config} page={page or none} section={section or none} taxonomy={taxonomy or none} term={term or none} /> }}{% endblock open_graph -%}
 
     {%- if config.generate_feeds %}
         {%- for feed in config.feed_filenames %}
-            {%- if feed is containing('atom') %}
+            {%- if feed is containing(pat='atom') %}
                 <link rel="alternate" type="application/atom+xml" title="{{ config.title }} Atom Feed" href="{{ get_url(path=feed, trailing_slash=false, lang=lang) | safe }}" />
             {%- endif %}
 
-            {%- if feed is containing('rss') %}
+            {%- if feed is containing(pat='rss') %}
                 <link rel="alternate" type="application/rss+xml" title="{{ config.title }} RSS Feed" href="{{ get_url(path=feed, trailing_slash=false, lang=lang) | safe }}" />
             {%- endif %}
 
@@ -60,7 +54,7 @@
         </div>
 
         {% block header_menu %}
-        {{ menu_macros::menu(config=config, current_path=current_path) }}
+        {{ <terminimal.menu config={config} current_url={current_url} /> }}
         {% endblock header_menu %}
     </header>
     {% endblock header %}
@@ -76,9 +70,9 @@
 
             {%- for page in show_pages %}
                 <div class="post on-list">
-                    {{ post_macros::header(page=page) }}
+                    {{ <terminimal.post_header page={page} /> }}
 
-                    {{ post_macros::content(page=page, summary=true, show_only_description=page.extra.show_only_description | default(value=false)) }}
+                    {{ <terminimal.post_content page={page} summary={true} show_only_description={page.extra.show_only_description | default(value=false)} /> }}
                 </div>
             {% endfor -%}
             <div class="pagination">
@@ -113,9 +107,9 @@
             {% else %}
                 <div class="copyright">
                     {%- if config.extra.author %}
-                        <span>© {{ date_macros::now_year() }} {{ config.extra.author }}</span>
+                        <span>© {{ <terminimal.now_year /> }} {{ config.extra.author }}</span>
                     {% else %}
-                        <span>© {{ date_macros::now_year() }} Powered by <a href="https://www.getzola.org/">Zola</a></span>
+                        <span>© {{ <terminimal.now_year /> }} Powered by <a href="https://www.getzola.org/">Zola</a></span>
                     {% endif -%}
 
                     <span class="copyright-theme">

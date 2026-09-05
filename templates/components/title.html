@@ -1,4 +1,4 @@
-{% macro title(page_title, main_title) %}
+{% component terminimal.title(page_title, main_title, config) %}
     {%- if config.extra.page_titles and config.extra.page_titles == "combined" -%}
         {%- if page_title -%}
             {{ page_title }} | {{ main_title }}
@@ -14,4 +14,4 @@
     {%- else -%}
         {{ main_title }}
     {%- endif -%}
-{% endmacro title %}
+{% endcomponent terminimal.title %}

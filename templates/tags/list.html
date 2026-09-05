@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 
 {%- block title -%}
-{{ title_macros::title(page_title="Tags", main_title=config.title) }}
+{{ <terminimal.title page_title="Tags" main_title={config.title} config={config} /> }}
 {%- endblock -%}
 
 {% block content %}
